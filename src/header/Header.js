@@ -10,6 +10,11 @@ function Header() {
           <span>Agency</span> Creative
         </div>
       </div>
+      <div className="header__hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </header>
   );
 }
