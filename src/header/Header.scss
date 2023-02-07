@@ -54,3 +54,13 @@
     margin: 0;
   }
 }
+
+.header__contact-button {
+  padding: 12px 50px;
+  border: 1px solid $main-blue;
+  color: $main-blue;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+}

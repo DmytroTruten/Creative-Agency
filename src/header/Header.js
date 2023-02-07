@@ -25,7 +25,7 @@ class Header extends Component {
             <span>Agency</span> Creative
           </div>
         </div>
-        {this.state.screen > 576 && (
+        {this.state.screen >= 768 && (
           <div className="header__navbar">
             <p>Home</p>
             <p>About</p>
@@ -33,7 +33,10 @@ class Header extends Component {
             <p>Projects</p>
           </div>
         )}
-        {this.state.screen < 576 && (
+        {this.state.screen >= 768 && (
+          <button className="header__contact-button">Contact Us</button>
+        )}
+        {this.state.screen < 768 && (
           <div className="header__hamburger-menu">
             <span></span>
             <span></span>
