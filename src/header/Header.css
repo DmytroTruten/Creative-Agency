@@ -42,4 +42,15 @@
 }
 .header__hamburger-menu span:nth-child(2) {
   width: 50%;
+}
+
+.header__navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 385px;
+}
+.header__navbar p {
+  font-family: "Quicksand";
+  font-size: 18px;
+  margin: 0;
 }/*# sourceMappingURL=Header.css.map */

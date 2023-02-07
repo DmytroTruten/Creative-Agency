@@ -1,11 +1,19 @@
 import "./Header.css";
 import logo from "../logo.svg";
-import React from "react";
+import React, { Component } from "react";
 
-class Header extends React.Component {
+class Header extends Component {
   constructor() {
     super();
-    this.state = { width: 0 };
+    this.state = { screen: window.innerWidth };
+  }
+
+  updateWidth = () => {
+    this.setState({ screen: window.innerWidth });
+  };
+
+  componentDidMount() {
+    window.addEventListener("resize", this.updateWidth);
   }
 
   render() {
@@ -17,30 +25,23 @@ class Header extends React.Component {
             <span>Agency</span> Creative
           </div>
         </div>
-        <div className="header__hamburger-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        {this.state.screen > 576 && (
+          <div className="header__navbar">
+            <p>Home</p>
+            <p>About</p>
+            <p>Services</p>
+            <p>Projects</p>
+          </div>
+        )}
+        {this.state.screen < 576 && (
+          <div className="header__hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        )}
       </header>
     );
-  }
-
-  updateDimensions = () => {
-    this.setState({ width: window.innerWidth });
-    if (this.state.width <= 576) {
-      console.log(this.state.width, "mobile");
-    } else {
-      console.log(this.state.width, "smth else");
-    }
-  };
-
-  componentDidMount() {
-    window.addEventListener("resize", this.updateDimensions);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateDimensions);
   }
 }
 
