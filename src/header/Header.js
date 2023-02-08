@@ -8,11 +8,11 @@ class Header extends Component {
     this.state = {
       screen: "",
       logoClass: "",
-      headerLogoTextClass: "header__logo-text header__logo-text_mobile",
+      headerLogoTextClass: "",
     };
   }
 
-  updateWidth = () => {
+  setHeaderState = () => {
     if (window.innerWidth <= 768 && this.state.screen !== "mobile") {
       this.setState({
         screen: "mobile",
@@ -26,23 +26,15 @@ class Header extends Component {
         headerLogoTextClass: "header__logo-text header__logo-text_desktop",
       });
     }
+  }
+
+  updateHeader = () => {
+    this.setHeaderState()
   };
 
   componentDidMount() {
-    if (window.innerWidth <= 768) {
-      this.setState({
-        screen: "mobile",
-        logoClass: "header__logo_mobile",
-        headerLogoTextClass: "header__logo-text header__logo-text_mobile",
-      });
-    } else {
-      this.setState({
-        screen: "desktop",
-        logoClass: "header__logo_desktop",
-        headerLogoTextClass: "header__logo-text header__logo-text_desktop",
-      });
-    }
-    window.addEventListener("resize", this.updateWidth);
+    this.setHeaderState()
+    window.addEventListener("resize", this.updateHeader);
   }
 
   render() {
