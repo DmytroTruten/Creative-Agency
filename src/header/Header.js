@@ -1,6 +1,5 @@
 import "./Header.css";
 import logo from "../logoMobile.svg";
-import logoDesktop from "../logoDesktop.svg";
 import React, { Component } from "react";
 
 class Header extends Component {
@@ -8,7 +7,7 @@ class Header extends Component {
     super();
     this.state = {
       screen: "",
-      headerLogo: logo,
+      logoClass: "",
       headerLogoTextClass: "header__logo-text header__logo-text_mobile",
     };
   }
@@ -17,13 +16,13 @@ class Header extends Component {
     if (window.innerWidth <= 768 && this.state.screen !== "mobile") {
       this.setState({
         screen: "mobile",
-        headerLogo: logo,
+        logoClass: "header__logo_mobile",
         headerLogoTextClass: "header__logo-text header__logo-text_mobile",
       });
     } else if (window.innerWidth > 768 && this.state.screen !== "desktop") {
       this.setState({
         screen: "desktop",
-        headerLogo: logoDesktop,
+        logoClass: "header__logo_desktop",
         headerLogoTextClass: "header__logo-text header__logo-text_desktop",
       });
     }
@@ -31,9 +30,17 @@ class Header extends Component {
 
   componentDidMount() {
     if (window.innerWidth <= 768) {
-      this.setState({ screen: "mobile" });
+      this.setState({
+        screen: "mobile",
+        logoClass: "header__logo_mobile",
+        headerLogoTextClass: "header__logo-text header__logo-text_mobile",
+      });
     } else {
-      this.setState({ screen: "desktop" });
+      this.setState({
+        screen: "desktop",
+        logoClass: "header__logo_desktop",
+        headerLogoTextClass: "header__logo-text header__logo-text_desktop",
+      });
     }
     window.addEventListener("resize", this.updateWidth);
   }
@@ -42,7 +49,7 @@ class Header extends Component {
     return (
       <header className="header">
         <div className="header__logo-container">
-          <img src={this.state.headerLogo} alt="logo" />
+          <img className={this.state.logoClass} src={logo} alt="logo" />
           <div className={this.state.headerLogoTextClass}>
             <span>Agency</span> Creative
           </div>
