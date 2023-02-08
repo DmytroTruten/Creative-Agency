@@ -14,13 +14,27 @@
 .header__logo-text {
   font-family: "Quicksand";
   max-width: min-content;
-  font-size: 12px;
+  
   margin-left: 8px;
   color: $main-black;
   span {
     font-weight: bold;
     font-size: 14px;
     color: $main-black;
+  }
+}
+
+.header__logo-text_mobile {
+  font-size: 12px;
+  span {
+    font-size: 14px;
+  }
+}
+
+.header__logo-text_desktop {
+  font-size: 16px;
+  span {
+    font-size: 20px;
   }
 }
 
@@ -63,4 +77,10 @@
   font-size: 16px;
   font-weight: bold;
   background-color: transparent;
+}
+
+@media (min-width: 1200px) {
+  .header {
+    padding: 70px 100px 0px;
+  }
 }
