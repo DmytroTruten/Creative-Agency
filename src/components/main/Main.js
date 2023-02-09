@@ -1,3 +1,4 @@
+import "./Main.css"
 import React, { Component } from "react";
 import Button from "../button/Button";
 
@@ -10,7 +11,7 @@ class Main extends Component {
           when you need us for improve your business, then come with us to help
           your business have reach it, you just sit and feel that goal.
         </h4>
-        <Button className="main_start-project-button" text="Start Project"/>
+        <Button className="main__start-project-button_mobile" text="Start Project"/>
       </main>
     );
   }

@@ -1,4 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import "./helpers/_variables.scss";
+
+:root {
+  --main-black: #1d1d1d;
+  --main-gray: #464646;
+}
+
+h1, h4 {
+  font-family: "Nunito";
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  color: var(--main-black);
+  font-weight: 800;
+}
+
+h4 {
+  color: var(--main-gray);
+  font-weight: 400;
+  line-height: 24px;
+}
 
 body {
   margin: 0;
