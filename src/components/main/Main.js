@@ -1,6 +1,7 @@
 import "./Main.css";
 import mainImage from "../../images/main-image.svg";
 import mainReview from "../../images/main-review.svg";
+import mainRate from "../../images/main-rate.svg";
 import React, { Component } from "react";
 import Button from "../button/Button";
 
@@ -49,6 +50,7 @@ class Main extends Component {
           <div className="main__image-container">
             <img className="main__image" src={mainImage} alt="" />
             <img className="main__review-image" src={mainReview} alt="" />
+            <img className="main__rate-image" src={mainRate} alt="" />
           </div>
         </main>
       </div>
