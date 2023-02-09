@@ -8,8 +8,6 @@ class Header extends Component {
     super();
     this.state = {
       screen: "",
-      logoClass: "",
-      headerLogoTextClass: "",
     };
   }
 
@@ -17,33 +15,25 @@ class Header extends Component {
     if (window.innerWidth <= 768 && this.state.screen !== "mobile") {
       this.setState({
         screen: "mobile",
-        logoClass: "header__logo_mobile",
-        headerLogoTextClass: "header__logo-text header__logo-text_mobile",
       });
     } else if (window.innerWidth > 768 && this.state.screen !== "desktop") {
       this.setState({
         screen: "desktop",
-        logoClass: "header__logo_desktop",
-        headerLogoTextClass: "header__logo-text header__logo-text_desktop",
       });
     }
   }
 
-  updateHeader = () => {
-    this.setHeaderState()
-  };
-
   componentDidMount() {
     this.setHeaderState()
-    window.addEventListener("resize", this.updateHeader);
+    window.addEventListener("resize", this.setHeaderState);
   }
 
   render() {
     return (
       <header className="header">
         <div className="header__logo-container">
-          <img className={this.state.logoClass} src={logo} alt="" />
-          <div className={this.state.headerLogoTextClass}>
+          <img className={`header__logo_${this.state.screen}`} src={logo} alt="" />
+          <div className={`header__logo-text_${this.state.screen}`}>
             <span>Agency</span> Creative
           </div>
         </div>
