@@ -1,7 +1,7 @@
 import "./Header.css";
-import logo from "../logoMobile.svg";
+import logo from "../../logoMobile.svg";
 import React, { Component } from "react";
-import Button from "../button/Button.js";
+import Button from "../button/Button";
 
 class Header extends Component {
   constructor() {
@@ -42,7 +42,7 @@ class Header extends Component {
     return (
       <header className="header">
         <div className="header__logo-container">
-          <img className={this.state.logoClass} src={logo} alt="logo" />
+          <img className={this.state.logoClass} src={logo} alt="" />
           <div className={this.state.headerLogoTextClass}>
             <span>Agency</span> Creative
           </div>
