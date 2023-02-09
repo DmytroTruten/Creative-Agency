@@ -1,6 +1,7 @@
 import "./Header.css";
 import logo from "../logoMobile.svg";
 import React, { Component } from "react";
+import Button from "../button/Button.js";
 
 class Header extends Component {
   constructor() {
@@ -63,7 +64,7 @@ class Header extends Component {
           </div>
         )}
         {this.state.screen === "desktop" && (
-          <button className="header__contact-button">Contact Us</button>
+          <Button className="header__contact-button" text="Contact Us" />
         )}
       </header>
     );
