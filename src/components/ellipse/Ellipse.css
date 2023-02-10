@@ -1,0 +1,19 @@
+.ellipse_red {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  top: -8px;
+  right: -18px;
+  background: linear-gradient(#ff8e8e, #f62424);
+}
+
+.ellipse_blue {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -4px;
+  left: -14px;
+  background: linear-gradient(#4485FF, #377DFF);
+}/*# sourceMappingURL=Ellipse.css.map */

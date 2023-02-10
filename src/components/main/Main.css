@@ -10,7 +10,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 50px;
+  position: relative;
+  margin-bottom: 50px;
 }
 .main_mobile .main__image-container {
   display: flex;
