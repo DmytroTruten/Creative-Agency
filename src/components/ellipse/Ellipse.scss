@@ -17,3 +17,25 @@
   left: -14px;
   background: linear-gradient(#4485FF, #377DFF);
 }
+
+.ellipse-grid_red, 
+.ellipse-grid_blue {
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+  width: 200px;
+  height: 100px;
+  position: absolute;
+
+  .ellipse-grid__ellipse_red {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: linear-gradient(#ff8e8e, #f62424);
+  }
+  .ellipse-grid__ellipse_blue {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: linear-gradient(#4485FF, #377DFF);
+  }
+}

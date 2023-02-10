@@ -4,7 +4,7 @@ import mainReview from "../../images/main-review.svg";
 import mainRate from "../../images/main-rate.svg";
 import React, { Component } from "react";
 import Button from "../button/Button";
-import Ellipse from "../ellipse/Ellipse";
+import { Ellipse, EllipseGrid } from "../ellipse/Ellipse";
 
 class Main extends Component {
   constructor() {
@@ -43,8 +43,9 @@ class Main extends Component {
             help your business have reach it, you just sit and feel that goal.
           </h4>
           <Button className="main__start-project-button" text="Start Project" />
-          <Ellipse color="red"/>
-          <Ellipse color="blue"/>
+          <Ellipse color="red" grid="false"/>
+          <Ellipse color="blue" grid="false"/>
+          <EllipseGrid color="blue" grid="true" />
         </div>
         <div className="main__image-container">
           <img className="main__image" src={mainImage} alt="" />
