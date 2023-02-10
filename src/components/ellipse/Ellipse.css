@@ -21,7 +21,9 @@
 .ellipse-grid_red,
 .ellipse-grid_blue {
   display: grid;
-  grid-template: 1fr 1fr 1fr/1fr 1fr 1fr 1fr;
+  grid-template: 1fr 1fr 1fr 1fr/1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
   width: 200px;
   height: 100px;
   position: absolute;

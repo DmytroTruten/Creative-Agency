@@ -2,12 +2,6 @@ import "./Ellipse.css";
 import React, { Component } from "react";
 
 export class Ellipse extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      screen: "",
-    };
-  }
 
   render() {
     return (
@@ -24,28 +18,21 @@ export class Ellipse extends Component {
 }
 
 export class EllipseGrid extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      screen: "",
-    };
-  }
+
+  appendEllipse = () => {
+    let ellipseArray = [];
+    for (let i = 0; i < 24; i++) {
+      ellipseArray.push(
+        <Ellipse key={i} color={this.props.color} grid="true" />
+      );
+    }
+    return ellipseArray;
+  };
 
   render() {
     return (
       <div className={`ellipse-grid_${this.props.color}`}>
-        <Ellipse color={this.props.color} grid="true" />
-        <Ellipse color={this.props.color} grid="true" />
-        <Ellipse color={this.props.color} grid="true" />
-        <Ellipse color={this.props.color} grid="true" />
-        <Ellipse color={this.props.color} grid="true" />
-        <Ellipse color={this.props.color} grid="true" />
-        <Ellipse color={this.props.color} grid="true" />
-        <Ellipse color={this.props.color} grid="true" />
-        <Ellipse color={this.props.color} grid="true" />
-        <Ellipse color={this.props.color} grid="true" />
-        <Ellipse color={this.props.color} grid="true" />
-        <Ellipse color={this.props.color} grid="true" />
+        {this.appendEllipse()}
       </div>
     );
   }

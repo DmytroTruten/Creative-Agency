@@ -45,7 +45,7 @@ class Main extends Component {
           <Button className="main__start-project-button" text="Start Project" />
           <Ellipse color="red" grid="false"/>
           <Ellipse color="blue" grid="false"/>
-          <EllipseGrid color="blue" grid="true" />
+          <EllipseGrid color="red" grid="true" />
         </div>
         <div className="main__image-container">
           <img className="main__image" src={mainImage} alt="" />
