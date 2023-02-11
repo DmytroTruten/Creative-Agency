@@ -4,7 +4,7 @@
   border-radius: 50%;
   position: absolute;
   top: -8px;
-  right: -1px;
+  right: -16px;
   background: linear-gradient(#ff8e8e, #f62424);
 }
 
@@ -14,7 +14,7 @@
   border-radius: 50%;
   position: absolute;
   bottom: -4px;
-  left: -1px;
+  left: -14px;
   background: linear-gradient(#4485FF, #377DFF);
 }
 
