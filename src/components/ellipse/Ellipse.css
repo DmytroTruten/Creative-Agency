@@ -4,7 +4,7 @@
   border-radius: 50%;
   position: absolute;
   top: -8px;
-  right: -18px;
+  right: -1px;
   background: linear-gradient(#ff8e8e, #f62424);
 }
 
@@ -14,31 +14,43 @@
   border-radius: 50%;
   position: absolute;
   bottom: -4px;
-  left: -14px;
+  left: -1px;
   background: linear-gradient(#4485FF, #377DFF);
 }
 
-.ellipse-grid_red,
+.ellipse-grid_red {
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr/1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-items: flex-end;
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.ellipse-grid_red .ellipse-grid__ellipse_red {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #FF5C00;
+}
+
 .ellipse-grid_blue {
   display: grid;
   grid-template: 1fr 1fr 1fr 1fr/1fr 1fr 1fr 1fr 1fr 1fr;
-  justify-items: center;
-  align-items: center;
-  width: 200px;
-  height: 100px;
+  justify-items: flex-start;
+  align-items: flex-end;
+  width: 30%;
+  height: 30%;
   position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
 }
-.ellipse-grid_red .ellipse-grid__ellipse_red,
-.ellipse-grid_blue .ellipse-grid__ellipse_red {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: linear-gradient(#ff8e8e, #f62424);
-}
-.ellipse-grid_red .ellipse-grid__ellipse_blue,
 .ellipse-grid_blue .ellipse-grid__ellipse_blue {
-  width: 16px;
-  height: 16px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
-  background: linear-gradient(#4485FF, #377DFF);
+  background-color: #377DFF;
 }/*# sourceMappingURL=Ellipse.css.map */

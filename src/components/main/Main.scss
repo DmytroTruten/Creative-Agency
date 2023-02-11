@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 70px 10px 0px;
+  padding-top: 70px;
 
   .main__text-container {
     width: 100%;
@@ -25,13 +25,13 @@
     .main__image {
       width: 95%;
       border-radius: 12px;
-      margin: 14px 0px;
+      margin: 14px 12px;
     }
 
     .main__review-image {
       position: absolute;
       right: 0;
-      bottom: -20px;
+      bottom: 0;
       width: 25%;
       border-radius: 6px;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
