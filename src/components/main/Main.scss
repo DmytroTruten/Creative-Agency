@@ -1,24 +1,19 @@
 @import "../../helpers/variables";
+@import "../../helpers/mixins";
 
 .main_mobile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flexbox;
   padding: 70px 10px 0px;
 
   .main__text-container {
+    @include flexbox;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     position: relative;
     margin-bottom: 50px;
   }
 
   .main__image-container {
-    display: flex;
-    justify-content: center;
+    @include flexbox;
     width: 100%;
     position: relative;
 
@@ -29,34 +24,20 @@
     }
 
     .main__review-image {
-      position: absolute;
+      @include main-review-image;
+      width: 25%;
       right: 0;
       bottom: 0;
-      width: 25%;
       border-radius: 6px;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
     .main__rate-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 30%;
-      border-radius: 6px;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      @include main-rate-image($mobile: true);
     }
   }
 
   .main__start-project-button {
-    color: #fff;
-    background-color: $main-blue;
-    border: none;
-    border-radius: 24px;
-    padding: 10px 35px;
-    font-family: "Quicksand";
-    font-weight: 600;
-    font-size: 12px;
-    box-shadow: 0px 4px 8px rgba(55, 125, 255, 0.5);
+    @include main-start-project-button($mobile: true);
   }
 
   .main__h4 {
@@ -65,22 +46,16 @@
 }
 
 .main_desktop {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flexbox;
   padding: 70px 0px 0px;
 
   .main__text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexbox;
     width: 55%;
   }
 
   .main__image-container {
-    display: flex;
-    justify-content: center;
+    @include flexbox;
     width: 60%;
     position: relative;
 
@@ -91,35 +66,20 @@
     }
 
     .main__review-image {
-      position: absolute;
+      @include main-review-image;
+      width: 20%;
       right: -8%;
       bottom: 40px;
-      width: 20%;
       border-radius: 16px;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
     .main__rate-image {
-      position: absolute;
-      top: 70px;
-      left: -5%;
-      width: 20%;
-      border-radius: 16px;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      @include main-rate-image($mobile: false);
     }
   }
 
   .main__start-project-button {
-    color: #fff;
-    background-color: $main-blue;
-    border: none;
-    border-radius: 24px;
-    margin-bottom: 40px;
-    padding: 12px 50px;
-    font-family: "Quicksand";
-    font-weight: 600;
-    font-size: 16px;
-    box-shadow: 0px 4px 8px rgba(55, 125, 255, 0.5);
+    @include main-start-project-button($mobile: false);
   }
 
   .main__h1 {

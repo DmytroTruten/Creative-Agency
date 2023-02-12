@@ -2,19 +2,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 70px 10px 0px;
 }
 .main_mobile .main__text-container {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 100%;
   position: relative;
   margin-bottom: 50px;
 }
 .main_mobile .main__image-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   width: 100%;
   position: relative;
@@ -26,30 +29,30 @@
 }
 .main_mobile .main__image-container .main__review-image {
   position: absolute;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 25%;
   right: 0;
   bottom: 0;
-  width: 25%;
   border-radius: 6px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .main_mobile .main__image-container .main__rate-image {
   position: absolute;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   top: 0;
   left: 0;
   width: 30%;
   border-radius: 6px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .main_mobile .main__start-project-button {
   color: #fff;
   background-color: #377dff;
   border: none;
   border-radius: 24px;
-  padding: 10px 35px;
   font-family: "Quicksand";
   font-weight: 600;
-  font-size: 12px;
   box-shadow: 0px 4px 8px rgba(55, 125, 255, 0.5);
+  padding: 10px 35px;
+  font-size: 12px;
 }
 .main_mobile .main__h4 {
   margin: 20px 0px;
@@ -59,17 +62,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 70px 0px 0px;
 }
 .main_desktop .main__text-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 55%;
 }
 .main_desktop .main__image-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   width: 60%;
   position: relative;
@@ -81,31 +87,31 @@
 }
 .main_desktop .main__image-container .main__review-image {
   position: absolute;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 20%;
   right: -8%;
   bottom: 40px;
-  width: 20%;
   border-radius: 16px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .main_desktop .main__image-container .main__rate-image {
   position: absolute;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   top: 70px;
   left: -5%;
   width: 20%;
   border-radius: 16px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .main_desktop .main__start-project-button {
   color: #fff;
   background-color: #377dff;
   border: none;
   border-radius: 24px;
-  margin-bottom: 40px;
-  padding: 12px 50px;
   font-family: "Quicksand";
   font-weight: 600;
-  font-size: 16px;
   box-shadow: 0px 4px 8px rgba(55, 125, 255, 0.5);
+  margin-bottom: 40px;
+  padding: 12px 50px;
+  font-size: 16px;
 }
 .main_desktop .main__h1 {
   font-size: 64px;
