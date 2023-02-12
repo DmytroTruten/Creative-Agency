@@ -15,7 +15,7 @@
   height: 16px;
   bottom: -4px;
   left: -14px;
-  background: linear-gradient(#4485ff, #377dff);
+  background: linear-gradient(rgba(68, 133, 255, 0.8), #377dff);
 }
 
 .ellipse_red_desktop {
@@ -35,5 +35,5 @@
   height: 31px;
   top: 313px;
   left: 94px;
-  background: linear-gradient(#4485ff, #377dff);
+  background: linear-gradient(rgba(68, 133, 255, 0.8), #377dff);
 }/*# sourceMappingURL=Ellipse.css.map */

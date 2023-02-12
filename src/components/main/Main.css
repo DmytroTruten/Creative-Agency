@@ -149,7 +149,7 @@
   height: 31px;
   top: 313px;
   left: 94px;
-  background: linear-gradient(#4485ff, #377dff);
+  background: linear-gradient(rgba(68, 133, 255, 0.8), #377dff);
   top: 5%;
   left: 100%;
 }

@@ -11,7 +11,7 @@
     } @else {
       bottom: -4px;
       left: -14px;
-      background: linear-gradient(#4485ff, #377dff);
+      background: linear-gradient(rgba(68, 133, 255, 0.8), #377dff);
     }
   } @else {
     width: 31px;
@@ -23,7 +23,7 @@
     } @else {
       top: 313px;
       left: 94px;
-      background: linear-gradient(#4485ff, #377dff);
+      background: linear-gradient(rgba(68, 133, 255, 0.8), #377dff);
     }
   }
 }
