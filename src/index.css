@@ -26,6 +26,7 @@ h4 {
 body {
   margin: 0;
   font-size: 14px;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

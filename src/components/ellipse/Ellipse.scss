@@ -1,58 +1,25 @@
+@import "../../helpers/mixins";
+
 .ellipse_red {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  position: absolute;
-  top: -8px;
-  right: -16px;
-  background: linear-gradient(#ff8e8e, #f62424);
+  @include ellipse($red: true);
 }
 
 .ellipse_blue {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  position: absolute;
-  bottom: -4px;
-  left: -14px;
-  background: linear-gradient(#4485FF, #377DFF);
+  @include ellipse($red: false);
 }
 
 .ellipse-grid_red {
-  display: grid;
-  grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr;
-  justify-items: flex-end;
-  width: 30%;
-  height: 30%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1;
+  @include ellipse-grid($red: true);
 
   .ellipse-grid__ellipse_red {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: #FF5C00;
+    @include ellipse-grid-ellipse($red: true);
   }
 }
 
 .ellipse-grid_blue {
-  display: grid;
-  grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr;
-  justify-items: flex-start;
-  align-items: flex-end;
-  width: 30%;
-  height: 30%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
+  @include ellipse-grid($red: false);
 
   .ellipse-grid__ellipse_blue {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: #377DFF;
+    @include ellipse-grid-ellipse($red: false);
   }
 }

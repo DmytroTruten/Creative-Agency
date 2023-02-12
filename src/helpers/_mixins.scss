@@ -1,0 +1,45 @@
+@mixin ellipse($red: true) {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  @if $red {
+    top: -8px;
+    right: -16px;
+    background: linear-gradient(#ff8e8e, #f62424);
+  } @else {
+    bottom: -4px;
+    left: -14px;
+    background: linear-gradient(#4485ff, #377dff);
+  }
+}
+
+@mixin ellipse-grid($red: true) {
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(6, 1fr);
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  z-index: -1;
+  @if $red {
+    top: 0;
+    right: 0;
+    justify-items: flex-end;
+  } @else {
+    justify-items: flex-start;
+    align-items: flex-end;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+@mixin ellipse-grid-ellipse($red: true) {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  @if $red {
+    background-color: #ff5c00;
+  } @else {
+    background-color: #377dff;
+  }
+}

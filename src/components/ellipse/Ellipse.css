@@ -15,42 +15,42 @@
   position: absolute;
   bottom: -4px;
   left: -14px;
-  background: linear-gradient(#4485FF, #377DFF);
+  background: linear-gradient(#4485ff, #377dff);
 }
 
 .ellipse-grid_red {
   display: grid;
-  grid-template: 1fr 1fr 1fr 1fr/1fr 1fr 1fr 1fr 1fr 1fr;
-  justify-items: flex-end;
+  grid-template: repeat(4, 1fr)/repeat(6, 1fr);
   width: 30%;
   height: 30%;
   position: absolute;
+  z-index: -1;
   top: 0;
   right: 0;
-  z-index: -1;
+  justify-items: flex-end;
 }
 .ellipse-grid_red .ellipse-grid__ellipse_red {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background-color: #FF5C00;
+  background-color: #ff5c00;
 }
 
 .ellipse-grid_blue {
   display: grid;
-  grid-template: 1fr 1fr 1fr 1fr/1fr 1fr 1fr 1fr 1fr 1fr;
-  justify-items: flex-start;
-  align-items: flex-end;
+  grid-template: repeat(4, 1fr)/repeat(6, 1fr);
   width: 30%;
   height: 30%;
   position: absolute;
+  z-index: -1;
+  justify-items: flex-start;
+  align-items: flex-end;
   left: 0;
   bottom: 0;
-  z-index: -1;
 }
 .ellipse-grid_blue .ellipse-grid__ellipse_blue {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background-color: #377DFF;
+  background-color: #377dff;
 }/*# sourceMappingURL=Ellipse.css.map */
