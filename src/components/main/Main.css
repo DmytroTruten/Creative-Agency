@@ -63,6 +63,41 @@
 .main_mobile .main__h4 {
   margin: 20px 0px;
 }
+.main_mobile .ellipse-grid_red {
+  display: grid;
+  grid-template: repeat(4, 1fr)/repeat(6, 1fr);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 30%;
+  justify-items: flex-end;
+}
+.main_mobile .ellipse-grid_red .ellipse-grid__ellipse_red {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ff5c00;
+}
+.main_mobile .ellipse-grid_blue {
+  display: grid;
+  grid-template: repeat(4, 1fr)/repeat(6, 1fr);
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+  width: 30%;
+  height: 30%;
+  align-items: flex-end;
+  justify-items: flex-start;
+}
+.main_mobile .ellipse-grid_blue .ellipse-grid__ellipse_blue {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #377dff;
+}
 
 .main_desktop {
   display: flex;
@@ -85,6 +120,7 @@
   align-items: center;
   justify-content: center;
   width: 68%;
+  height: 62%;
   position: relative;
 }
 .main_desktop .main__image-container .ellipse_red_desktop {
@@ -109,10 +145,14 @@
   top: 5%;
   left: 100%;
 }
-.main_desktop .main__image-container .main__image {
+.main_desktop .main__image-container .main__inner-image-container {
   width: 75%;
   border-radius: 50px;
-  margin: 50px 0px;
+  margin: 60px 0px;
+  position: relative;
+}
+.main_desktop .main__image-container .main__image {
+  width: 100%;
 }
 .main_desktop .main__image-container .main__review-image {
   position: absolute;
@@ -130,6 +170,42 @@
   width: 18%;
   height: 16%;
   border-radius: 16px;
+}
+.main_desktop .main__image-container .ellipse-grid_red {
+  display: grid;
+  grid-template: repeat(4, 1fr)/repeat(6, 1fr);
+  position: absolute;
+  z-index: -1;
+  top: 88%;
+  left: 22%;
+  width: 15%;
+  height: 15%;
+  justify-items: center;
+  align-items: center;
+}
+.main_desktop .main__image-container .ellipse-grid_red .ellipse-grid__ellipse_red {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ff5c00;
+}
+.main_desktop .main__image-container .ellipse-grid_blue {
+  display: grid;
+  grid-template: repeat(4, 1fr)/repeat(6, 1fr);
+  position: absolute;
+  z-index: -1;
+  top: -4%;
+  left: 18%;
+  width: 15%;
+  height: 15%;
+  justify-items: center;
+  align-items: center;
+}
+.main_desktop .main__image-container .ellipse-grid_blue .ellipse-grid__ellipse_blue {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #377dff;
 }
 .main_desktop .main__start-project-button {
   color: #fff;

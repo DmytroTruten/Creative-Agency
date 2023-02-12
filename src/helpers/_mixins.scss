@@ -31,20 +31,8 @@
 @mixin ellipse-grid($red: true) {
   display: grid;
   grid-template: repeat(4, 1fr) / repeat(6, 1fr);
-  width: 30%;
-  height: 30%;
   position: absolute;
   z-index: -1;
-  @if $red {
-    top: 0;
-    right: 0;
-    justify-items: flex-end;
-  } @else {
-    justify-items: flex-start;
-    align-items: flex-end;
-    left: 0;
-    bottom: 0;
-  }
 }
 
 @mixin ellipse-grid-ellipse($red: true) {

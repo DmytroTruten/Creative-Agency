@@ -47,13 +47,15 @@ class Main extends Component {
           <Ellipse color="blue" grid="false"/>
         </div>
         <div className="main__image-container">
+          <div className="main__inner-image-container">
           <img className="main__image" src={mainImage} alt="" />
+          <EllipseGrid color="red" grid="true" />
+          <EllipseGrid color="blue" grid="true" />
+          </div>
           <img className="main__review-image" src={mainReview} alt="" />
           <img className="main__rate-image" src={mainRate} alt="" />
           <Ellipse color="red" grid="false"/>
           <Ellipse color="blue" grid="false"/>
-          <EllipseGrid color="red" grid="true" />
-          <EllipseGrid color="blue" grid="true" />
         </div>
       </main>
     );

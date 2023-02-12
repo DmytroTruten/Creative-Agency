@@ -15,19 +15,3 @@
 .ellipse_blue_desktop {
   @include ellipse($red: false, $mobile: false);
 }
-
-.ellipse-grid_red {
-  @include ellipse-grid($red: true);
-
-  .ellipse-grid__ellipse_red {
-    @include ellipse-grid-ellipse($red: true);
-  }
-}
-
-.ellipse-grid_blue {
-  @include ellipse-grid($red: false);
-
-  .ellipse-grid__ellipse_blue {
-    @include ellipse-grid-ellipse($red: false);
-  }
-}
