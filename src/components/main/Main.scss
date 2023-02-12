@@ -1,6 +1,8 @@
 @import "../../helpers/variables";
 @import "../../helpers/mixins";
 
+
+// Main Mobile
 .main_mobile {
   @include flexbox;
   padding: 70px 10px 0px;
@@ -17,6 +19,14 @@
     width: 100%;
     position: relative;
 
+    .ellipse_red_mobile {
+      display: none;
+    }
+
+    .ellipse_blue_mobile {
+      display: none;
+    }
+
     .main__image {
       width: 93%;
       border-radius: 12px;
@@ -32,7 +42,11 @@
     }
 
     .main__rate-image {
-      @include main-rate-image($mobile: true);
+      @include main-rate-image;
+      top: 0;
+      left: 0;
+      width: 30%;
+      border-radius: 6px;
     }
   }
 
@@ -45,6 +59,7 @@
   }
 }
 
+// Main Desktop
 .main_desktop {
   @include flexbox;
   padding: 70px 0px 0px;
@@ -57,25 +72,41 @@
 
   .main__image-container {
     @include flexbox;
-    width: 60%;
+    width: 68%;
     position: relative;
+    .ellipse_red_desktop {
+      @include ellipse($red: true, $mobile: false);
+      top: 40%;
+      left: 7%;
+    }
+
+    .ellipse_blue_desktop {
+      @include ellipse($red: false, $mobile: false);
+      top: 5%;
+      left: 100%;
+    }
 
     .main__image {
-      width: 90%;
+      width: 75%;
       border-radius: 50px;
       margin: 50px 0px;
     }
 
     .main__review-image {
       @include main-review-image;
-      width: 20%;
-      right: -8%;
+      width: 17%;
+      right: 20px;
       bottom: 40px;
       border-radius: 16px;
     }
 
     .main__rate-image {
-      @include main-rate-image($mobile: false);
+      @include main-rate-image;
+      top: 70px;
+      left: 20px;
+      width: 18%;
+      height: 16%;
+      border-radius: 16px;
     }
   }
 
