@@ -1,11 +1,19 @@
 @import "../../helpers/mixins";
 
-.ellipse_red {
-  @include ellipse($red: true);
+.ellipse_red_mobile {
+  @include ellipse($red: true, $mobile: true);
 }
 
-.ellipse_blue {
-  @include ellipse($red: false);
+.ellipse_blue_mobile {
+  @include ellipse($red: false, $mobile: true);
+}
+
+.ellipse_red_desktop {
+  @include ellipse($red: true, $mobile: false);
+}
+
+.ellipse_blue_desktop {
+  @include ellipse($red: false, $mobile: false);
 }
 
 .ellipse-grid_red {

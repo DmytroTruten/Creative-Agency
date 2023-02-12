@@ -64,6 +64,7 @@
   align-items: center;
   justify-content: center;
   padding: 70px 0px 0px;
+  position: relative;
 }
 .main_desktop .main__text-container {
   display: flex;

@@ -2,6 +2,29 @@ import "./Ellipse.css";
 import React, { Component } from "react";
 
 export class Ellipse extends Component {
+  constructor() {
+    super();
+    this.state = {
+      screen: "",
+    };
+  }
+
+  updateEllipseState = () => {
+    if (window.innerWidth <= 768 && this.state.screen !== "mobile") {
+      this.setState({
+        screen: "mobile",
+      });
+    } else if (window.innerWidth > 768 && this.state.screen !== "desktop") {
+      this.setState({
+        screen: "desktop",
+      });
+    }
+  };
+
+  componentDidMount() {
+    this.updateEllipseState();
+    window.addEventListener("resize", this.updateEllipseState);
+  }
 
   render() {
     return (
@@ -10,7 +33,7 @@ export class Ellipse extends Component {
           <div className={`ellipse-grid__ellipse_${this.props.color}`}></div>
         )}
         {this.props.grid === "false" && (
-          <div className={`ellipse_${this.props.color}`}></div>
+          <div className={`ellipse_${this.props.color}_${this.state.screen}`}></div>
         )}
       </div>
     );
@@ -18,7 +41,6 @@ export class Ellipse extends Component {
 }
 
 export class EllipseGrid extends Component {
-
   appendEllipse = () => {
     let ellipseArray = [];
     for (let i = 0; i < 24; i++) {

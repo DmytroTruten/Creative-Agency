@@ -1,16 +1,30 @@
-@mixin ellipse($red: true) {
-  width: 16px;
-  height: 16px;
+@mixin ellipse($red: true, $mobile: true) {
   border-radius: 50%;
   position: absolute;
-  @if $red {
-    top: -8px;
-    right: -16px;
-    background: linear-gradient(#ff8e8e, #f62424);
+  @if $mobile {
+    width: 16px;
+    height: 16px;
+    @if $red {
+      top: -8px;
+      right: -16px;
+      background: linear-gradient(#ff8e8e, #f62424);
+    } @else {
+      bottom: -4px;
+      left: -14px;
+      background: linear-gradient(#4485ff, #377dff);
+    }
   } @else {
-    bottom: -4px;
-    left: -14px;
-    background: linear-gradient(#4485ff, #377dff);
+    width: 31px;
+    height: 31px;
+    @if $red {
+      top: 167px;
+      right: -16px;
+      background: linear-gradient(#ff8e8e, #f62424);
+    } @else {
+      top: 313px;
+      left: 94px;
+      background: linear-gradient(#4485ff, #377dff);
+    }
   }
 }
 
