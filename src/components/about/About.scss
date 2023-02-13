@@ -1,0 +1,61 @@
+@import "../../helpers/variables";
+@import "../../helpers/mixins";
+
+.about_mobile {
+  @include flexbox;
+  padding: 80px 20px 0px;
+
+  .about__text-container {
+    @include flexbox;
+    padding-bottom: 50px
+  }
+
+  .about__header-container {
+    @include flexbox;
+
+    .about__header {
+      font-weight: 600;
+      color: $main-blue;
+    }
+
+    .about__subheader {
+      margin: 10px 0px 0px;
+      font-family: "Nunito";
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+  .about__text {
+    margin: 35px 0px;
+    p {
+      text-align: start;
+      margin: 10px 0px;
+    }
+  }
+
+  .about__buttons-container {
+    @include flexbox;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+
+    .about__button {
+      @include main-start-project-button;
+    }
+
+    .about__play-button {
+      @include main-start-project-button;
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      color: $main-blue;
+      padding: 10px 35px;
+      box-shadow: none;
+      border: 1px solid $main-blue;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+}

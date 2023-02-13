@@ -63,12 +63,12 @@
   border: none;
   border-radius: 24px;
   font-family: "Quicksand";
-  font-weight: 600;
+  font-weight: 700;
   box-shadow: 0px 4px 8px rgba(55, 125, 255, 0.5);
   padding: 10px 35px;
   font-size: 12px;
 }
-.main_mobile .main__h4 {
+.main_mobile .main__p {
   margin: 20px 0px;
 }
 .main_mobile .ellipse-grid_red {
@@ -221,7 +221,7 @@
   border: none;
   border-radius: 24px;
   font-family: "Quicksand";
-  font-weight: 600;
+  font-weight: 700;
   box-shadow: 0px 4px 8px rgba(55, 125, 255, 0.5);
   margin-bottom: 40px;
   padding: 12px 50px;
@@ -230,7 +230,7 @@
 .main_desktop .main__h1 {
   font-size: 64px;
 }
-.main_desktop .main__h4 {
+.main_desktop .main__p {
   font-size: 20px;
   margin: 40px 0px;
 }/*# sourceMappingURL=Main.css.map */

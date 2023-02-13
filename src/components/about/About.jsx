@@ -1,3 +1,4 @@
+import "./About.css"
 import React, { Component } from "react";
 import Button from "../button/Button"
 
@@ -31,8 +32,8 @@ class About extends Component {
       <section className={`about_${this.state.screen}`}>
         <div className="about__text-container">
           <div className="about__header-container">
-            <h4>About Us</h4>
-            <p>Our Teammates</p>
+            <h4 className="about__header">About Us</h4>
+            <h2 className="about__subheader">Our Teammate</h2>
           </div>
           <div className="about__text">
             <p>
@@ -41,12 +42,12 @@ class About extends Component {
               content look interesting and make people look for your business.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dicta molestias temporibus dolor magni ut cum unde sunt provident assumenda doloribus, aspernatur sed eum reiciendis saepe pariatur illum iste. Culpa?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dicta dolor magni ut cum unde sunt provident.
             </p>
           </div>
           <div className="about__buttons-container">
             <Button className="about__button" text="About Us"/>
-            <Button className="about__play-button" text="About Us"/>
+            <Button className="about__play-button" text="About Us" play="true"/>
           </div>
         </div>
       </section>

@@ -36,10 +36,10 @@ class Main extends Component {
       <main className={`main_${this.state.screen}`}>
         <div className="main__text-container">
           <h1 className="main__h1">Make your dream business goal come true</h1>
-          <h4 className="main__h4">
+          <p className="main__p">
             when you need us for improve your business, then come with us to
             help your business have reach it, you just sit and feel that goal.
-          </h4>
+          </p>
           <Button className="main__start-project-button" text="Start Project" />
           <Ellipse color="red" grid="false" />
           <Ellipse color="blue" grid="false" />
