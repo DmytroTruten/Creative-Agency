@@ -1,22 +1,22 @@
 .about_mobile {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   padding: 80px 20px 0px;
 }
 .about_mobile .about__text-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   padding-bottom: 50px;
 }
 .about_mobile .about__header-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 .about_mobile .about__header-container .about__header {
   font-weight: 600;
@@ -37,10 +37,10 @@
 }
 .about_mobile .about__buttons-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
+  max-width: 500px;
   justify-content: space-between;
   width: 95%;
 }
@@ -70,9 +70,19 @@
   background-color: transparent;
   color: #377dff;
   padding: 10px 35px;
+  margin-top: 20px;
   box-shadow: none;
   border: 1px solid #377dff;
 }
 .about_mobile .about__buttons-container .about__play-button img {
   margin-right: 10px;
+}
+
+@media (min-width: 340px) {
+  .about__buttons-container {
+    flex-direction: row !important;
+  }
+  .about__buttons-container .about__play-button {
+    margin-top: 0px !important;
+  }
 }/*# sourceMappingURL=About.css.map */

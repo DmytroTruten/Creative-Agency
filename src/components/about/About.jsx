@@ -38,7 +38,7 @@ class About extends Component {
           <div className="about__text">
             <p>
               We move with make a Creative Strategy for help your business goal,
-              we help to improve your income by a services we have. make your
+              we help to improve your income by a services we have, make your
               content look interesting and make people look for your business.
             </p>
             <p>

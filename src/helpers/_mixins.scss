@@ -46,11 +46,15 @@
   }
 }
 
-@mixin flexbox {
+@mixin flexbox($row: true) {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  @if $row {
+    flex-direction: row;
+  } @else {
+    flex-direction: column;
+  }
 }
 
 @mixin main-review-image {

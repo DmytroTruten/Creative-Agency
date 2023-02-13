@@ -2,16 +2,16 @@
 @import "../../helpers/mixins";
 
 .about_mobile {
-  @include flexbox;
+  @include flexbox($row: false);
   padding: 80px 20px 0px;
 
   .about__text-container {
-    @include flexbox;
-    padding-bottom: 50px
+    @include flexbox($row: false);
+    padding-bottom: 50px;
   }
 
   .about__header-container {
-    @include flexbox;
+    @include flexbox($row: false);
 
     .about__header {
       font-weight: 600;
@@ -34,8 +34,8 @@
   }
 
   .about__buttons-container {
-    @include flexbox;
-    flex-direction: row;
+    @include flexbox($row: false);
+    max-width: 500px;
     justify-content: space-between;
     width: 95%;
 
@@ -50,12 +50,22 @@
       background-color: transparent;
       color: $main-blue;
       padding: 10px 35px;
+      margin-top: 20px;
       box-shadow: none;
       border: 1px solid $main-blue;
 
       img {
         margin-right: 10px;
       }
+    }
+  }
+}
+
+@media (min-width: 340px) {
+  .about__buttons-container {
+    flex-direction: row !important;
+    .about__play-button {
+      margin-top: 0px !important;
     }
   }
 }
