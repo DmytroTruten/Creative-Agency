@@ -25,6 +25,7 @@
       font-weight: 700;
     }
   }
+
   .about__text {
     margin: 35px 0px;
     p {
@@ -81,6 +82,107 @@
 
     .about__image {
       width: 100%;
+    }
+  }
+}
+
+.about_desktop {
+  @include flexbox($row: false);
+  padding: 100px 0px 0px;
+
+  .about__header-container {
+    @include flexbox($row: false);
+
+    .about__header {
+      font-weight: 600;
+      color: $main-blue;
+      font-size: 24px;
+    }
+
+    .about__subheader {
+      margin: 10px 0px 0px;
+      font-family: "Nunito";
+      font-size: 55px;
+      font-weight: 700;
+    }
+  }
+
+  .about__text-image-container {
+    @include flexbox($row: true);
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+  }
+
+  .about__text-container {
+    @include flexbox($row: false);
+    align-items: flex-start;
+    padding-bottom: 50px;
+    width: 45%;
+  }
+
+  .about__text {
+    margin: 35px 0px;
+    p {
+      font-size: 20px;
+      line-height: 32px;
+      text-align: start;
+      margin: 10px 0px;
+    }
+  }
+
+  .about__image-container {
+    @include flexbox($row: false);
+    width: 45%;
+    padding-top: 15px;
+    position: relative;
+
+    .ellipse-grid_pink {
+      @include ellipse-grid;
+      top: 0;
+      left: 0;
+      width: 30%;
+      height: 70px;
+      justify-items: center;
+
+      .ellipse-grid__ellipse_pink {
+        @include ellipse-grid-ellipse(main-pink);
+      }
+    }
+
+    .about__image {
+      width: 100%;
+      border-radius: 24px;
+    }
+  }
+
+  .about__buttons-container {
+    @include flexbox($row: false);
+    max-width: 400px;
+    justify-content: space-between;
+    width: 100%;
+
+    .about__button {
+      @include main-start-project-button;
+      font-size: 16px;
+      padding: 12px 50px;
+      line-height: 24px
+    }
+
+    .about__play-button {
+      @include main-start-project-button;
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      color: $main-blue;
+      box-shadow: none;
+      border: 1px solid $main-blue;
+      font-size: 16px;
+      padding: 12px 50px;
+
+      img {
+        width: 24px;
+        margin-right: 10px;
+      }
     }
   }
 }

@@ -19,6 +19,12 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  font-family: "Quicksand";
+  font-weight: 700;
+  text-align: center;
+}
+
 p {
   color: var(--main-gray);
   font-weight: 400;
@@ -27,11 +33,6 @@ p {
   text-align: center;
 }
 
-h2 {
-  font-family: "Quicksand";
-  font-weight: 700;
-  text-align: center;
-}
 
 html,
 body {
