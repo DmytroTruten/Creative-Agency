@@ -3,7 +3,7 @@
 
 .about_mobile {
   @include flexbox($row: false);
-  padding: 80px 20px 0px;
+  padding: 70px 20px 0px;
 
   .about__text-container {
     @include flexbox($row: false);
@@ -57,6 +57,30 @@
       img {
         margin-right: 10px;
       }
+    }
+  }
+
+  .about__image-container {
+    @include flexbox($row: false);
+    width: 100%;
+    padding-top: 15px;
+    position: relative;
+
+    .ellipse-grid_pink {
+      @include ellipse-grid;
+      top: 0;
+      left: 0;
+      width: 30%;
+      height: 70px;
+      justify-items: center;
+
+      .ellipse-grid__ellipse_pink {
+        @include ellipse-grid-ellipse(main-pink);
+      }
+    }
+
+    .about__image {
+      width: 100%;
     }
   }
 }

@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 80px 20px 0px;
+  padding: 70px 20px 0px;
 }
 .about_mobile .about__text-container {
   display: flex;
@@ -76,6 +76,35 @@
 }
 .about_mobile .about__buttons-container .about__play-button img {
   margin-right: 10px;
+}
+.about_mobile .about__image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 15px;
+  position: relative;
+}
+.about_mobile .about__image-container .ellipse-grid_pink {
+  display: grid;
+  grid-template: repeat(4, 1fr)/repeat(6, 1fr);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 70px;
+  justify-items: center;
+}
+.about_mobile .about__image-container .ellipse-grid_pink .ellipse-grid__ellipse_pink {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #eb00ff;
+}
+.about_mobile .about__image-container .about__image {
+  width: 100%;
 }
 
 @media (min-width: 340px) {

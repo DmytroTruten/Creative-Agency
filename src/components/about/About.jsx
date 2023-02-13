@@ -1,6 +1,8 @@
-import "./About.css"
+import "./About.css";
+import aboutImage from "../../images/about-image.svg";
 import React, { Component } from "react";
-import Button from "../button/Button"
+import Button from "../button/Button";
+import { EllipseGrid } from "../ellipse/Ellipse";
 
 class About extends Component {
   constructor() {
@@ -42,13 +44,22 @@ class About extends Component {
               content look interesting and make people look for your business.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dicta dolor magni ut cum unde sunt provident.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dicta
+              dolor magni ut cum unde sunt provident.
             </p>
           </div>
           <div className="about__buttons-container">
-            <Button className="about__button" text="About Us"/>
-            <Button className="about__play-button" text="About Us" play="true"/>
+            <Button className="about__button" text="About Us" />
+            <Button
+              className="about__play-button"
+              text="About Us"
+              play="true"
+            />
           </div>
+        </div>
+        <div className="about__image-container">
+          <img className="about__image" src={aboutImage} alt="" />
+          <EllipseGrid color="pink"/>
         </div>
       </section>
     );

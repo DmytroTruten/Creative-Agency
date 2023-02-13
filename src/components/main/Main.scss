@@ -64,7 +64,7 @@
   }
 
   .ellipse-grid_red {
-    @include ellipse-grid($red: true);
+    @include ellipse-grid;
     top: 0;
     right: 0;
     width: 30%;
@@ -72,12 +72,12 @@
     justify-items: flex-end;
 
     .ellipse-grid__ellipse_red {
-      @include ellipse-grid-ellipse($red: true);
+      @include ellipse-grid-ellipse(main-red);
     }
   }
 
   .ellipse-grid_blue {
-    @include ellipse-grid($red: false);
+    @include ellipse-grid;
     left: 0;
     bottom: 0;
     width: 30%;
@@ -86,7 +86,7 @@
     justify-items: flex-start;
 
     .ellipse-grid__ellipse_blue {
-      @include ellipse-grid-ellipse($red: false);
+      @include ellipse-grid-ellipse(main-blue);
     }
   }
 }
@@ -149,7 +149,7 @@
     }
 
     .ellipse-grid_red {
-      @include ellipse-grid($red: true);
+      @include ellipse-grid;
       top: 88%;
       left: 22%;
       width: 15%;
@@ -158,12 +158,12 @@
       align-items: center;
 
       .ellipse-grid__ellipse_red {
-        @include ellipse-grid-ellipse($red: true);
+        @include ellipse-grid-ellipse(red);
       }
     }
 
     .ellipse-grid_blue {
-      @include ellipse-grid($red: false);
+      @include ellipse-grid;
       top: -4%;
       left: 18%;
       width: 15%;
@@ -172,7 +172,7 @@
       align-items: center;
 
       .ellipse-grid__ellipse_blue {
-        @include ellipse-grid-ellipse($red: false);
+        @include ellipse-grid-ellipse(blue);
       }
     }
   }

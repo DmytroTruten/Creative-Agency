@@ -1,3 +1,5 @@
+@import "./variables";
+
 @mixin ellipse($red: true, $mobile: true) {
   border-radius: 50%;
   position: absolute;
@@ -11,7 +13,7 @@
     } @else {
       bottom: -4px;
       left: -14px;
-      background: linear-gradient(rgba(68, 133, 255, 0.8), #377dff);
+      background: linear-gradient(rgba(68, 133, 255, 0.8), $main-blue);
     }
   } @else {
     width: 31px;
@@ -23,26 +25,28 @@
     } @else {
       top: 313px;
       left: 94px;
-      background: linear-gradient(rgba(68, 133, 255, 0.8), #377dff);
+      background: linear-gradient(rgba(68, 133, 255, 0.8), $main-blue);
     }
   }
 }
 
-@mixin ellipse-grid($red: true) {
+@mixin ellipse-grid {
   display: grid;
   grid-template: repeat(4, 1fr) / repeat(6, 1fr);
   position: absolute;
   z-index: -1;
 }
 
-@mixin ellipse-grid-ellipse($red: true) {
+@mixin ellipse-grid-ellipse($color) {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  @if $red {
+  @if $color == main-red {
     background-color: #ff5c00;
-  } @else {
-    background-color: #377dff;
+  } @else if $color == main-blue {
+    background-color: $main-blue;
+  } @else if $color == main-pink {
+    background-color: $main-pink;
   }
 }
 
