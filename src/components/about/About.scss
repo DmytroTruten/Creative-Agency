@@ -13,18 +13,6 @@
 
   .about__header-container {
     @include flexbox($row: false);
-
-    .about__header {
-      font-weight: 600;
-      color: $main-blue;
-    }
-
-    .about__subheader {
-      margin: 10px 0px 0px;
-      font-family: "Nunito";
-      font-size: 24px;
-      font-weight: 700;
-    }
   }
 
   .about__text {
@@ -96,16 +84,11 @@
     @include flexbox($row: false);
 
     .about__header {
-      font-weight: 600;
-      color: $main-blue;
       font-size: 24px;
     }
 
     .about__subheader {
-      margin: 10px 0px 0px;
-      font-family: "Nunito";
       font-size: 55px;
-      font-weight: 700;
     }
   }
 

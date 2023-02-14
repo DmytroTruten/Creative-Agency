@@ -1,0 +1,25 @@
+@import "../../helpers/mixins";
+@import "../../helpers/variables";
+
+.services_mobile {
+  @include flexbox($row: false);
+  padding: 70px 20px 0px;
+
+  .services__text-container {
+    margin: 35px 0px 0px;
+  }
+
+  .services__read-more-container {
+    @include flexbox($row: true);
+    justify-content: flex-start;
+    margin: 10px 0px 0px;
+
+    .services__read-more {
+      font-weight: 700;
+    }
+
+    .services__arrow-right {
+      margin-left: 10px;
+    }
+  }
+}

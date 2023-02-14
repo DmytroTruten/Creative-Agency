@@ -1,0 +1,24 @@
+.services_mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 70px 20px 0px;
+}
+.services_mobile .services__text-container {
+  margin: 35px 0px 0px;
+}
+.services_mobile .services__read-more-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 10px 0px 0px;
+}
+.services_mobile .services__read-more-container .services__read-more {
+  font-weight: 700;
+}
+.services_mobile .services__read-more-container .services__arrow-right {
+  margin-left: 10px;
+}/*# sourceMappingURL=Services.css.map */
