@@ -241,4 +241,16 @@
   .about__buttons-container .about__play-button {
     margin-top: 0px !important;
   }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .about__text-image-container {
+    flex-direction: column !important;
+  }
+  .about__text-container {
+    width: 80% !important;
+    align-items: center !important;
+  }
+  .about__image-container {
+    width: 80% !important;
+  }
 }/*# sourceMappingURL=About.css.map */
