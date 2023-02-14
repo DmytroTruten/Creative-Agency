@@ -1,4 +1,5 @@
 import "./Services.css";
+import socialMedia from "../../images/social-media.svg";
 import arrowRight from "../../images/arrow-right.svg";
 import React, { Component } from "react";
 
@@ -42,7 +43,23 @@ export class Services extends Component {
             <img className="services__arrow-right" src={arrowRight} alt="" />
           </div>
         </div>
+        <Service />
       </section>
+    )
+  }
+}
+
+class Service extends Component {
+  render() {
+    return (
+      <div className="services-grid">
+        <div className="services-grid__services-card">
+          <div className="services-card__content">
+            <img className="services-card__content-img" src={socialMedia} alt="" />
+            <p className="services-card__content-text">Social Media Management</p>
+          </div>
+        </div>
+      </div>
     )
   }
 }
