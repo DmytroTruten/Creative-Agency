@@ -72,6 +72,7 @@ class About extends Component {
           <div className="about__image-container">
             <img className="about__image" src={aboutImage} alt="" />
             <EllipseGrid color="pink" />
+            <EllipseGrid color="red" />
           </div>
         </div>
       </section>

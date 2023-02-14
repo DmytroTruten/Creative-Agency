@@ -1,7 +1,6 @@
 @import "../../helpers/variables";
 @import "../../helpers/mixins";
 
-
 // About Mobile
 .about_mobile {
   @include flexbox($row: false);
@@ -91,7 +90,7 @@
 // About Desktop
 .about_desktop {
   @include flexbox($row: false);
-  padding: 100px 0px 0px;
+  padding: 100px 100px 0px;
 
   .about__header-container {
     @include flexbox($row: false);
@@ -113,14 +112,14 @@
   .about__text-image-container {
     @include flexbox($row: true);
     flex-direction: row-reverse;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   .about__text-container {
     @include flexbox($row: false);
     align-items: flex-start;
     padding-bottom: 50px;
-    width: 45%;
+    width: 48%;
   }
 
   .about__text {
@@ -135,25 +134,40 @@
 
   .about__image-container {
     @include flexbox($row: false);
-    width: 45%;
-    padding-top: 15px;
+    width: 48%;
+    padding: 15px 0px;
     position: relative;
 
     .ellipse-grid_pink {
       @include ellipse-grid;
-      top: 0;
-      left: 0;
-      width: 30%;
+      bottom: 0;
+      right: 0;
+      width: 17%;
       height: 70px;
       justify-items: center;
+      align-items: flex-end;
 
       .ellipse-grid__ellipse_pink {
         @include ellipse-grid-ellipse(main-pink);
       }
     }
 
+    .ellipse-grid_red {
+      @include ellipse-grid;
+      top: 0;
+      left: 0;
+      width: 17%;
+      height: 70px;
+      justify-items: center;
+      align-items: flex-start;
+
+      .ellipse-grid__ellipse_red {
+        @include ellipse-grid-ellipse(main-red);
+      }
+    }
+
     .about__image {
-      width: 100%;
+      width: 90%;
       border-radius: 24px;
     }
   }
@@ -168,7 +182,7 @@
       @include main-start-project-button;
       font-size: 16px;
       padding: 12px 50px;
-      line-height: 24px
+      line-height: 24px;
     }
 
     .about__play-button {

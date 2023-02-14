@@ -158,7 +158,7 @@
       align-items: center;
 
       .ellipse-grid__ellipse_red {
-        @include ellipse-grid-ellipse(red);
+        @include ellipse-grid-ellipse(main-red);
       }
     }
 
@@ -172,7 +172,7 @@
       align-items: center;
 
       .ellipse-grid__ellipse_blue {
-        @include ellipse-grid-ellipse(blue);
+        @include ellipse-grid-ellipse(main-blue);
       }
     }
   }
