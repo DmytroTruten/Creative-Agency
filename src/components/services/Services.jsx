@@ -34,11 +34,11 @@ export class Services extends Component {
   render() {
     return (
       <section className={`services_${this.state.screen}`}>
-        <div className="services__header-container">
-          <h4 className="services__header">Our Services</h4>
-          <h2 className="services__subheader">Perfect and Fast Movement</h2>
-        </div>
         <div className="services__text-container">
+          <div className="services__header-container">
+            <h4 className="services__header">Our Services</h4>
+            <h2 className="services__subheader">Perfect and Fast Movement</h2>
+          </div>
           <p className="services__text">
             We move with make a Creative Strategy for help your business goal,
             we help to improve your income by a services we have. make your
@@ -49,7 +49,7 @@ export class Services extends Component {
             <img className="services__arrow-right" src={arrowRight} alt="" />
           </div>
         </div>
-        <div className="services-grid">
+        <div className="services__grid">
           <Service card="media" />
           <Service card="engine" />
           <Service card="design" />
@@ -64,48 +64,42 @@ class Service extends Component {
   render() {
     return (
       <div className="services-grid__services-card">
-        <div className="services-card__content">
-          {this.props.card === "media" && (
-            <div>
-              <img
-                className="services-card__content-img"
-                src={socialMedia}
-                alt=""
-              />
-              <p className="services-card__content-text">
-                Social Media Management
-              </p>
-            </div>
-          )}
-          {this.props.card === "engine" && (
-            <div>
-              <img
-                className="services-card__content-img"
-                src={searchEngine}
-                alt=""
-              />
-              <p className="services-card__content-text">
-                Social Media Management
-              </p>
-            </div>
-          )}
-          {this.props.card === "design" && (
-            <div>
-              <img className="services-card__content-img" src={design} alt="" />
-              <p className="services-card__content-text">
-                Social Media Management
-              </p>
-            </div>
-          )}
-          {this.props.card === "ads" && (
-            <div>
-              <img className="services-card__content-img" src={ads} alt="" />
-              <p className="services-card__content-text">
-                Social Media Management
-              </p>
-            </div>
-          )}
-        </div>
+        {this.props.card === "media" && (
+          <div className="services-card__content">
+            <img
+              className="services-card__content-img"
+              src={socialMedia}
+              alt=""
+            />
+            <p className="services-card__content-text">
+              Social Media Management
+            </p>
+          </div>
+        )}
+        {this.props.card === "engine" && (
+          <div className="services-card__content">
+            <img
+              className="services-card__content-img"
+              src={searchEngine}
+              alt=""
+            />
+            <p className="services-card__content-text">
+              Search Engine Optimization
+            </p>
+          </div>
+        )}
+        {this.props.card === "design" && (
+          <div className="services-card__content">
+            <img className="services-card__content-img" src={design} alt="" />
+            <p className="services-card__content-text">Design</p>
+          </div>
+        )}
+        {this.props.card === "ads" && (
+          <div className="services-card__content">
+            <img className="services-card__content-img" src={ads} alt="" />
+            <p className="services-card__content-text">Ads</p>
+          </div>
+        )}
       </div>
     );
   }
