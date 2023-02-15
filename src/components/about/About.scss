@@ -96,17 +96,17 @@
     @include flexbox($row: true);
     flex-direction: row-reverse;
     justify-content: space-between;
+    margin-top: 30px;
   }
 
   .about__text-container {
     @include flexbox($row: false);
     align-items: flex-start;
-    padding-bottom: 50px;
-    width: 48%;
+    width: 49%;
   }
 
   .about__text {
-    margin: 35px 0px;
+    margin: 0px 0px 35px;
     p {
       font-size: 20px;
       line-height: 32px;
@@ -117,14 +117,14 @@
 
   .about__image-container {
     @include flexbox($row: false);
-    width: 48%;
+    width: 45%;
     padding: 15px 0px;
     position: relative;
 
     .ellipse-grid_pink {
       @include ellipse-grid;
       bottom: 0;
-      right: 0;
+      right: -30px;
       width: 17%;
       height: 70px;
       justify-items: center;
@@ -138,7 +138,7 @@
     .ellipse-grid_red {
       @include ellipse-grid;
       top: 0;
-      left: 0;
+      left: -30px;
       width: 17%;
       height: 70px;
       justify-items: center;
@@ -150,7 +150,7 @@
     }
 
     .about__image {
-      width: 90%;
+      width: 100%;
       border-radius: 24px;
     }
   }
@@ -204,6 +204,7 @@
   .about__text-container {
     width: 80% !important;
     align-items: center !important;
+    padding-bottom: 50px;
   }
 
   .about__image-container {
