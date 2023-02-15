@@ -32,14 +32,7 @@
     margin-top: 30px;
 
     .services-grid__services-card {
-      @include flexbox($row: false);
-      width: 100%;
-      max-width: 262px;
-      height: 269px;
-      justify-content: flex-start;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 30px;
-      box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.1);
+      @include service-card;
     }
 
     .services-card__content {
@@ -68,7 +61,6 @@
     width: 42%;
 
     .services__header-container {
-
       .services__header {
         text-align: left;
         font-size: 24px;
@@ -111,14 +103,7 @@
     column-gap: 41px;
 
     .services-grid__services-card {
-      @include flexbox($row: false);
-      width: 100%;
-      max-width: 262px;
-      height: 269px;
-      justify-content: flex-start;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 30px;
-      box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.1);
+      @include service-card;
     }
 
     .services-card__content {
@@ -133,6 +118,59 @@
       .services-card__content-text {
         font-size: 24px;
         font-weight: 700;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .services_desktop {
+    @include flexbox($row: false);
+    padding: 100px 100px 0px;
+  
+    .services__text-container {
+      width: 100%;
+    }
+  
+    .services__read-more-container {
+      @include flexbox($row: true);
+      justify-content: flex-start;
+      margin: 10px 0px 0px;
+  
+      .services__read-more {
+        font-weight: 700;
+      }
+  
+      .services__arrow-right {
+        margin-left: 10px;
+      }
+    }
+  
+    .services__grid {
+      display: grid;
+      grid-template: 1fr 1fr / 1fr 1fr;
+      row-gap: 35px;
+      justify-items: center;
+      width: 77%;
+      margin-top: 30px;
+  
+      .services-grid__services-card {
+        @include service-card;
+      }
+  
+      .services-card__content {
+        @include flexbox($row: false);
+        max-width: min-content;
+        margin-top: 35px;
+  
+        .services-card__content-img {
+          margin: 0px 0px 27px;
+        }
+  
+        .services-card__content-text {
+          font-size: 16px;
+          font-weight: 700;
+        }
       }
     }
   }
