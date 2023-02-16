@@ -89,13 +89,14 @@
 }
 
 .header__contact-button {
-  padding: 12px 50px;
+  font-family: "Quicksand";
+  font-weight: 700;
+  border-radius: 24px;
   border: 1px solid #377dff;
   color: #377dff;
-  border-radius: 24px;
-  font-size: 16px;
-  font-weight: bold;
   background-color: transparent;
+  padding: 12px 50px;
+  font-size: 16px;
 }
 
 @media (min-width: 1200px) {

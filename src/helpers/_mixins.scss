@@ -71,20 +71,26 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-@mixin main-start-project-button($mobile: true) {
-  color: #fff;
-  background-color: $main-blue;
-  border: none;
-  border-radius: 24px;
+@mixin button($screen, $background) {
   font-family: "Quicksand";
   font-weight: 700;
-  box-shadow: 0px 4px 8px rgba(55, 125, 255, 0.5);
+  border-radius: 24px;
 
-  @if $mobile {
+  @if $background == full {
+    color: #fff;
+    background-color: $main-blue;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(55, 125, 255, 0.5);
+  } @else {
+    border: 1px solid $main-blue;
+    color: $main-blue;
+    background-color: transparent;
+  }
+
+  @if $screen == mobile {
     padding: 10px 35px;
     font-size: 12px;
   } @else {
-    margin-bottom: 40px;
     padding: 12px 50px;
     font-size: 16px;
   }

@@ -56,7 +56,7 @@
   }
 
   .main__start-project-button {
-    @include main-start-project-button($mobile: true);
+    @include button(mobile, full);
   }
 
   .main__p {
@@ -100,6 +100,7 @@
   .main__text-container {
     @include flexbox($row: false);
     width: 55%;
+    padding-bottom: 40px;
   }
 
   .main__image-container {
@@ -178,7 +179,7 @@
   }
 
   .main__start-project-button {
-    @include main-start-project-button($mobile: false);
+    @include button(desktop, full);
   }
 
   .main__h1 {

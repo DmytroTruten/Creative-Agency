@@ -30,19 +30,13 @@
     width: 95%;
 
     .about__button {
-      @include main-start-project-button;
+      @include button(mobile, full);
     }
 
     .about__play-button {
-      @include main-start-project-button;
-      display: flex;
-      align-items: center;
-      background-color: transparent;
-      color: $main-blue;
-      padding: 10px 35px;
+      @include button(mobile, hollow);
+      @include flexbox($row: true);
       margin-top: 20px;
-      box-shadow: none;
-      border: 1px solid $main-blue;
 
       img {
         margin-right: 10px;
@@ -162,14 +156,12 @@
     width: 100%;
 
     .about__button {
-      @include main-start-project-button;
-      font-size: 16px;
-      padding: 12px 50px;
+      @include button(desktop, full);
       line-height: 24px;
     }
 
     .about__play-button {
-      @include main-start-project-button;
+      @include button(desktop, hollow);
       display: flex;
       align-items: center;
       background-color: transparent;

@@ -35,23 +35,15 @@
   margin-top: 35px;
 }
 .portfolio_mobile .portfolio__button-container .portfolio__button {
-  color: #fff;
-  background-color: #377dff;
-  border: none;
-  border-radius: 24px;
   font-family: "Quicksand";
   font-weight: 700;
-  box-shadow: 0px 4px 8px rgba(55, 125, 255, 0.5);
+  border-radius: 24px;
+  border: 1px solid #377dff;
+  color: #377dff;
+  background-color: transparent;
   padding: 10px 35px;
   font-size: 12px;
-  display: flex;
-  align-items: center;
-  background-color: transparent;
-  color: #377dff;
-  padding: 10px 35px;
   font-size: 16px;
-  box-shadow: none;
-  border: 1px solid #377dff;
 }
 
 .portfolio_desktop {
@@ -115,24 +107,15 @@
   background-color: #eb00ff;
 }
 .portfolio_desktop .portfolio__button {
-  color: #fff;
-  background-color: #377dff;
-  border: none;
-  border-radius: 24px;
   font-family: "Quicksand";
   font-weight: 700;
-  box-shadow: 0px 4px 8px rgba(55, 125, 255, 0.5);
-  padding: 10px 35px;
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  background-color: transparent;
-  color: #377dff;
-  padding: 12px 50px;
-  margin-top: 35px;
-  font-size: 16px;
-  box-shadow: none;
+  border-radius: 24px;
   border: 1px solid #377dff;
+  color: #377dff;
+  background-color: transparent;
+  padding: 12px 50px;
+  font-size: 16px;
+  margin-top: 35px;
 }
 .portfolio_desktop .ellipse-grid_pink {
   display: grid;
