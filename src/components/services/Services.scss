@@ -3,10 +3,14 @@
 
 .services_mobile {
   @include flexbox($row: false);
-  padding: 70px 20px 0px;
+  padding: 70px 25px 0px;
 
   .services__text-container {
     margin: 35px 0px 0px;
+
+    .services__text {
+      margin-top: 35px;
+    }
   }
 
   .services__read-more-container {

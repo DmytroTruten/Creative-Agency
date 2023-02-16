@@ -4,7 +4,7 @@
 // About Mobile
 .about_mobile {
   @include flexbox($row: false);
-  padding: 70px 20px 0px;
+  padding: 70px 25px 0px;
 
   .about__text-container {
     @include flexbox($row: false);

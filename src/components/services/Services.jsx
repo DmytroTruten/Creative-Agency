@@ -1,12 +1,12 @@
 import "./Services.css";
-import socialMedia from "../../images/social-media.svg";
-import searchEngine from "../../images/search-engine.svg";
-import design from "../../images/design.svg";
-import ads from "../../images/ads.svg";
+import socialMedia from "../../images/services/social-media.svg";
+import searchEngine from "../../images/services/search-engine.svg";
+import design from "../../images/services/design.svg";
+import ads from "../../images/services/ads.svg";
 import arrowRight from "../../images/arrow-right.svg";
 import React, { Component } from "react";
 
-export class Services extends Component {
+class Services extends Component {
   constructor() {
     super();
     this.state = {
@@ -59,6 +59,8 @@ export class Services extends Component {
     );
   }
 }
+
+export default Services;
 
 class Service extends Component {
   render() {

@@ -3,10 +3,13 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 70px 20px 0px;
+  padding: 70px 25px 0px;
 }
 .services_mobile .services__text-container {
   margin: 35px 0px 0px;
+}
+.services_mobile .services__text-container .services__text {
+  margin-top: 35px;
 }
 .services_mobile .services__read-more-container {
   display: flex;
