@@ -3,16 +3,16 @@
 
 // About Mobile
 .about_mobile {
-  @include flexbox($row: false);
+  @include flexbox(column);
   padding: 70px 25px 0px;
 
   .about__text-container {
-    @include flexbox($row: false);
+    @include flexbox(column);
     padding-bottom: 50px;
   }
 
   .about__header-container {
-    @include flexbox($row: false);
+    @include flexbox(column);
   }
 
   .about__text {
@@ -24,7 +24,7 @@
   }
 
   .about__buttons-container {
-    @include flexbox($row: false);
+    @include flexbox(column);
     max-width: 500px;
     justify-content: space-between;
     width: 95%;
@@ -35,7 +35,7 @@
 
     .about__play-button {
       @include button(mobile, hollow);
-      @include flexbox($row: true);
+      @include flexbox(row);
       margin-top: 20px;
 
       img {
@@ -45,7 +45,7 @@
   }
 
   .about__image-container {
-    @include flexbox($row: false);
+    @include flexbox(column);
     width: 100%;
     padding-top: 15px;
     position: relative;
@@ -71,11 +71,11 @@
 
 // About Desktop
 .about_desktop {
-  @include flexbox($row: false);
+  @include flexbox(column);
   padding: 100px 100px 0px;
 
   .about__header-container {
-    @include flexbox($row: false);
+    @include flexbox(column);
 
     .about__header {
       font-size: 24px;
@@ -87,14 +87,14 @@
   }
 
   .about__text-image-container {
-    @include flexbox($row: true);
+    @include flexbox(row);
     flex-direction: row-reverse;
     justify-content: space-between;
     margin-top: 30px;
   }
 
   .about__text-container {
-    @include flexbox($row: false);
+    @include flexbox(column);
     align-items: flex-start;
     width: 49%;
   }
@@ -110,7 +110,7 @@
   }
 
   .about__image-container {
-    @include flexbox($row: false);
+    @include flexbox(column);
     width: 45%;
     padding: 15px 0px;
     position: relative;
@@ -150,7 +150,7 @@
   }
 
   .about__buttons-container {
-    @include flexbox($row: false);
+    @include flexbox(column);
     max-width: 400px;
     justify-content: space-between;
     width: 100%;

@@ -3,18 +3,18 @@
 
 // Main Mobile
 .main_mobile {
-  @include flexbox($row: false);
+  @include flexbox(column);
   padding: 70px 10px 20px;
 
   .main__text-container {
-    @include flexbox($row: false);
+    @include flexbox(column);
     width: 100%;
     position: relative;
     margin-bottom: 50px;
   }
 
   .main__image-container {
-    @include flexbox($row: false);
+    @include flexbox(column);
     width: 100%;
     position: relative;
 
@@ -27,7 +27,7 @@
     }
 
     .main__inner-image-container {
-      @include flexbox($row: false);
+      @include flexbox(column);
       width: 100%;
       position: relative;
     }
@@ -93,18 +93,18 @@
 
 // Main Desktop
 .main_desktop {
-  @include flexbox($row: false);
+  @include flexbox(column);
   padding: 70px 0px 0px;
   position: relative;
 
   .main__text-container {
-    @include flexbox($row: false);
+    @include flexbox(column);
     width: 55%;
     padding-bottom: 40px;
   }
 
   .main__image-container {
-    @include flexbox($row: false);
+    @include flexbox(column);
     width: 68%;
     height: 62%;
     position: relative;

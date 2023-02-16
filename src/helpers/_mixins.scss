@@ -50,11 +50,11 @@
   }
 }
 
-@mixin flexbox($row: true) {
+@mixin flexbox($flex-direction) {
   display: flex;
   align-items: center;
   justify-content: center;
-  @if $row {
+  @if $flex-direction == row {
     flex-direction: row;
   } @else {
     flex-direction: column;
@@ -97,7 +97,7 @@
 }
 
 @mixin service-card {
-  @include flexbox($row: false);
+  @include flexbox(column);
   width: 100%;
   max-width: 262px;
   height: 269px;

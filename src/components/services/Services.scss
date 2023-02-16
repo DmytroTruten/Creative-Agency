@@ -2,7 +2,7 @@
 @import "../../helpers/variables";
 
 .services_mobile {
-  @include flexbox($row: false);
+  @include flexbox(column);
   padding: 70px 25px 0px;
 
   .services__text-container {
@@ -14,7 +14,7 @@
   }
 
   .services__read-more-container {
-    @include flexbox($row: true);
+    @include flexbox(row);
     justify-content: flex-start;
     margin: 10px 0px 0px;
 
@@ -40,7 +40,7 @@
     }
 
     .services-card__content {
-      @include flexbox($row: false);
+      @include flexbox(column);
       max-width: min-content;
       margin-top: 35px;
 
@@ -57,7 +57,7 @@
 }
 
 .services_desktop {
-  @include flexbox($row: true);
+  @include flexbox(row);
   padding: 100px 100px 0px;
   justify-content: space-between;
 
@@ -85,7 +85,7 @@
     }
 
     .services__read-more-container {
-      @include flexbox($row: true);
+      @include flexbox(row);
       justify-content: flex-end;
       margin-top: 35px;
 
@@ -111,7 +111,7 @@
     }
 
     .services-card__content {
-      @include flexbox($row: false);
+      @include flexbox(column);
       max-width: min-content;
       margin-top: 35px;
 
@@ -129,7 +129,7 @@
 
 @media (min-width: 768px) and (max-width: 992px) {
   .services_desktop {
-    @include flexbox($row: false);
+    @include flexbox(column);
     padding: 100px 100px 0px;
   
     .services__text-container {
@@ -137,7 +137,7 @@
     }
   
     .services__read-more-container {
-      @include flexbox($row: true);
+      @include flexbox(row);
       justify-content: flex-start;
       margin: 10px 0px 0px;
   
@@ -163,7 +163,7 @@
       }
   
       .services-card__content {
-        @include flexbox($row: false);
+        @include flexbox(column);
         max-width: min-content;
         margin-top: 35px;
   
