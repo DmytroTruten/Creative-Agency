@@ -36,7 +36,7 @@ class Portfolio extends Component {
         <div className="portfolio__text-container">
           <div className="portfolio__header-container">
             <h4 className="portfolio__header">Our Portfolio</h4>
-            <h2>What do we do</h2>
+            <h2 className="portfolio__subheader">What do we do</h2>
           </div>
           <p className="portfolio__text">
             all projects that we have already done , proven can help to use more
