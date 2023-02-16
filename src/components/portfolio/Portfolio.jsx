@@ -3,7 +3,8 @@ import designFurniture from "../../images/portfolio/design-furniture.svg";
 import cloud from "../../images/portfolio/cloud.svg";
 import designByte from "../../images/portfolio/design-byte.svg";
 import React, { Component } from "react";
-import Button from "../button/Button"
+import Button from "../button/Button";
+import { Ellipse, EllipseGrid } from "../ellipse/Ellipse";
 
 class Portfolio extends Component {
   constructor() {
@@ -44,13 +45,15 @@ class Portfolio extends Component {
           </p>
         </div>
         <div className="portfolio__grid">
-          <img className="design-furniture-img" src={designFurniture} alt="" />
-          <img className="cloud-img" src={cloud} alt="" />
           <img className="design-byte-img" src={designByte} alt="" />
+          <img className="cloud-img" src={cloud} alt="" />
+          <img className="design-furniture-img" src={designFurniture} alt="" />
+          <EllipseGrid color="pink" />
         </div>
         <div className="portfolio__button-container">
-          <Button className='portfolio__button' text="See All Portfolio"/>
+          <Button className="portfolio__button" text="See All Portfolio" />
         </div>
+        <EllipseGrid color="pink" />
       </section>
     );
   }
