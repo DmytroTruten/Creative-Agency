@@ -29,6 +29,19 @@ class Testimonial extends Component {
     window.addEventListener("resize", this.updateTestimonialState);
   }
 
+  appendCarouselItem = () => {
+    let carouselItemArray = [];
+    for (let i = 0; i < 3; i++) {
+      carouselItemArray.push(
+        <Carousel.Item key={i}>
+          {this.state.screen === "mobile" && <TestimonialCard quantity="1" />}
+          {this.state.screen === "desktop" && <TestimonialCard quantity="3" />}
+        </Carousel.Item>
+      );
+    }
+    return carouselItemArray;
+  };
+
   render() {
     return (
       <section className={`testimonial_${this.state.screen}`}>
@@ -43,94 +56,40 @@ class Testimonial extends Component {
           indicators={false}
           interval={null}
         >
-          <Carousel.Item>
-            <Card>
-              <Card.Body>
-                <div className="card-header">
-                  <img className="card-image" src={angelRose} alt="" />
-                  <div className="card-info">
-                    <p className="card-name">Angel Rose</p>
-                    <p className="card-position">Creative Manager</p>
-                  </div>
-                </div>
-                <p className="card-text">
-                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit”
-                </p>
-              </Card.Body>
-            </Card>
-            {this.state.screen === "desktop" && (
-              <Fragment>
-                <Card>
-                  <Card.Body>
-                    <div className="card-header">
-                      <img className="card-image" src={angelRose} alt="" />
-                      <div className="card-info">
-                        <p className="card-name">Angel Rose</p>
-                        <p className="card-position">Creative Manager</p>
-                      </div>
-                    </div>
-                    <p className="card-text">
-                      “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit”
-                    </p>
-                  </Card.Body>
-                </Card>
-                <Card>
-                  <Card.Body>
-                    <div className="card-header">
-                      <img className="card-image" src={angelRose} alt="" />
-                      <div className="card-info">
-                        <p className="card-name">Angel Rose</p>
-                        <p className="card-position">Creative Manager</p>
-                      </div>
-                    </div>
-                    <p className="card-text">
-                      “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit”
-                    </p>
-                  </Card.Body>
-                </Card>
-              </Fragment>
-            )}
-          </Carousel.Item>
-          <Carousel.Item>
-            <Card>
-              <Card.Body>
-                <div className="card-header">
-                  <img className="card-image" src={angelRose} alt="" />
-                  <div className="card-info">
-                    <p className="card-name">Angel Rose</p>
-                    <p className="card-position">Creative Manager</p>
-                  </div>
-                </div>
-                <p className="card-text">
-                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit”
-                </p>
-              </Card.Body>
-            </Card>
-          </Carousel.Item>
-          <Carousel.Item>
-            <Card>
-              <Card.Body>
-                <div className="card-header">
-                  <img className="card-image" src={angelRose} alt="" />
-                  <div className="card-info">
-                    <p className="card-name">Angel Rose</p>
-                    <p className="card-position">Creative Manager</p>
-                  </div>
-                </div>
-                <p className="card-text">
-                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit”
-                </p>
-              </Card.Body>
-            </Card>
-          </Carousel.Item>
+          {this.appendCarouselItem()}
         </Carousel>
       </section>
     );
+  }
+}
+
+class TestimonialCard extends Component {
+  appendCards = () => {
+    let cardsArray = [];
+    for (let i = 0; i < this.props.quantity; i++) {
+      cardsArray.push(
+        <Card key={i}>
+          <Card.Body>
+            <div className="card-header">
+              <img className="card-image" src={angelRose} alt="" />
+              <div className="card-info">
+                <p className="card-name">Angel Rose</p>
+                <p className="card-position">Creative Manager</p>
+              </div>
+            </div>
+            <p className="card-text">
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit”
+            </p>
+          </Card.Body>
+        </Card>
+      );
+    }
+    return cardsArray;
+  };
+
+  render() {
+    return <Fragment>{this.appendCards()}</Fragment>;
   }
 }
 
