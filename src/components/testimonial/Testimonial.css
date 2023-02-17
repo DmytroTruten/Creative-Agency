@@ -7,4 +7,50 @@
 }
 .testimonial_mobile .testimonial__carousel {
   margin-top: 35px;
+}
+.testimonial_mobile .active.carousel-item,
+.testimonial_mobile .carousel-item-start,
+.testimonial_mobile .carousel-item-end {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.testimonial_mobile .card {
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #f5f5f5;
+  width: 97%;
+}
+.testimonial_mobile .card .card-body {
+  padding: 40px 20px 40px 40px;
+}
+.testimonial_mobile .card .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-bottom: none;
+  padding: 0;
+  background-color: transparent;
+}
+.testimonial_mobile .card .card-info {
+  margin-left: 30px;
+}
+.testimonial_mobile .card .card-name {
+  text-align: left;
+  font-size: 18px;
+  color: #377dff;
+  font-weight: 600;
+}
+.testimonial_mobile .card .card-position {
+  text-align: left;
+  font-size: 11px;
+  color: rgba(70, 70, 70, 0.5215686275);
+}
+.testimonial_mobile .card .card-text {
+  text-align: left;
+  margin-top: 40px;
 }/*# sourceMappingURL=Testimonial.css.map */

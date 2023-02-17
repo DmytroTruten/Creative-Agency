@@ -1,5 +1,5 @@
 import "./Testimonial.css";
-import aboutImage from "../../images/about-image.svg";
+import angelRose from "../../images/testimonial/angel-rose.svg";
 import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
 import React, { Component } from "react";
@@ -37,28 +37,60 @@ class Testimonial extends Component {
           <h2 className="testimonial__subheader">People Talk about us</h2>
         </div>
 
-        <Carousel className="testimonial__carousel" controls={false}>
+        <Carousel
+          className="testimonial__carousel"
+          controls={false}
+          indicators={false}
+          interval={null}
+        >
           <Carousel.Item>
             <Card>
               <Card.Body>
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit”
+                <div className="card-header">
+                  <img className="card-image" src={angelRose} alt="" />
+                  <div className="card-info">
+                    <p className="card-name">Angel Rose</p>
+                    <p className="card-position">Creative Manager</p>
+                  </div>
+                </div>
+                <p className="card-text">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit”
+                </p>
               </Card.Body>
             </Card>
           </Carousel.Item>
           <Carousel.Item>
             <Card>
               <Card.Body>
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit”
+                <div className="card-header">
+                  <img className="card-image" src={angelRose} alt="" />
+                  <div className="card-info">
+                    <p className="card-name">Angel Rose</p>
+                    <p className="card-position">Creative Manager</p>
+                  </div>
+                </div>
+                <p className="card-text">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit”
+                </p>
               </Card.Body>
             </Card>
           </Carousel.Item>
           <Carousel.Item>
             <Card>
               <Card.Body>
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit”
+                <div className="card-header">
+                  <img className="card-image" src={angelRose} alt="" />
+                  <div className="card-info">
+                    <p className="card-name">Angel Rose</p>
+                    <p className="card-position">Creative Manager</p>
+                  </div>
+                </div>
+                <p className="card-text">
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit”
+                </p>
               </Card.Body>
             </Card>
           </Carousel.Item>

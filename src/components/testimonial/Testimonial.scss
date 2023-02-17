@@ -8,4 +8,52 @@
   .testimonial__carousel {
     margin-top: 35px;
   }
+
+  .active.carousel-item,
+  .carousel-item-start,
+  .carousel-item-end  {
+    @include flexbox(row);
+  }
+
+  .card {
+    border-radius: 20px;
+    border: none; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #f5f5f5;
+    width: 97%;
+
+    .card-body {
+      padding: 40px 20px 40px 40px;
+    }
+
+    .card-header {
+      @include flexbox(row);
+      justify-content: flex-start;
+      border-bottom: none;
+      padding: 0;
+      background-color: transparent;
+    }
+
+    .card-info {
+      margin-left: 30px;
+    }
+
+    .card-name {
+      text-align: left;
+      font-size: 18px;
+      color: $main-blue;
+      font-weight: 600;
+    }
+
+    .card-position {
+      text-align: left;
+      font-size: 11px;
+      color: #46464685;
+    }
+
+    .card-text {
+      text-align: left;
+      margin-top: 40px;
+    }
+  }
 }
