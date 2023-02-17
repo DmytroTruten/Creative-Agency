@@ -1,0 +1,11 @@
+@import "../../helpers/variables";
+@import "../../helpers/mixins";
+
+.testimonial_mobile {
+  @include flexbox(column);
+  padding: 70px 20px 0px;
+
+  .testimonial__carousel {
+    margin-top: 35px;
+  }
+}

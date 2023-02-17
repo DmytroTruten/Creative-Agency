@@ -4,7 +4,7 @@ import cloud from "../../images/portfolio/cloud.svg";
 import designByte from "../../images/portfolio/design-byte.svg";
 import React, { Component } from "react";
 import Button from "../button/Button";
-import { Ellipse, EllipseGrid } from "../ellipse/Ellipse";
+import { EllipseGrid } from "../ellipse/Ellipse";
 
 class Portfolio extends Component {
   constructor() {

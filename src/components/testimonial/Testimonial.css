@@ -1,0 +1,10 @@
+.testimonial_mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 70px 20px 0px;
+}
+.testimonial_mobile .testimonial__carousel {
+  margin-top: 35px;
+}/*# sourceMappingURL=Testimonial.css.map */
