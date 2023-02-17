@@ -2,7 +2,7 @@ import "./Testimonial.css";
 import angelRose from "../../images/testimonial/angel-rose.svg";
 import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 class Testimonial extends Component {
   constructor() {
@@ -59,6 +59,40 @@ class Testimonial extends Component {
                 </p>
               </Card.Body>
             </Card>
+            {this.state.screen === "desktop" && (
+              <Fragment>
+                <Card>
+                  <Card.Body>
+                    <div className="card-header">
+                      <img className="card-image" src={angelRose} alt="" />
+                      <div className="card-info">
+                        <p className="card-name">Angel Rose</p>
+                        <p className="card-position">Creative Manager</p>
+                      </div>
+                    </div>
+                    <p className="card-text">
+                      “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit”
+                    </p>
+                  </Card.Body>
+                </Card>
+                <Card>
+                  <Card.Body>
+                    <div className="card-header">
+                      <img className="card-image" src={angelRose} alt="" />
+                      <div className="card-info">
+                        <p className="card-name">Angel Rose</p>
+                        <p className="card-position">Creative Manager</p>
+                      </div>
+                    </div>
+                    <p className="card-text">
+                      “Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit”
+                    </p>
+                  </Card.Body>
+                </Card>
+              </Fragment>
+            )}
           </Carousel.Item>
           <Carousel.Item>
             <Card>
