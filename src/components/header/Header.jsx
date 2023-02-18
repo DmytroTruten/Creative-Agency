@@ -11,6 +11,10 @@ class Header extends Component {
     };
   }
 
+  scrollIntoSection = (section) => {
+    section.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+  };
+
   setHeaderState = () => {
     if (window.innerWidth <= 768 && this.state.screen !== "mobile") {
       this.setState({
@@ -21,10 +25,10 @@ class Header extends Component {
         screen: "desktop",
       });
     }
-  }
+  };
 
   componentDidMount() {
-    this.setHeaderState()
+    this.setHeaderState();
     window.addEventListener("resize", this.setHeaderState);
   }
 
@@ -39,10 +43,46 @@ class Header extends Component {
         </div>
         {this.state.screen === "desktop" && (
           <div className="header__navbar">
-            <p>Home</p>
-            <p>About</p>
-            <p>Services</p>
-            <p>Projects</p>
+            <p
+              onClick={() => {
+                this.scrollIntoSection("home");
+              }}
+            >
+              Home
+            </p>
+            <p
+              onClick={() => {
+                this.scrollIntoSection(
+                  document.getElementsByClassName(
+                    `about_${this.state.screen}`
+                  )[0]
+                );
+              }}
+            >
+              About
+            </p>
+            <p
+              onClick={() => {
+                this.scrollIntoSection(
+                  document.getElementsByClassName(
+                    `services_${this.state.screen}`
+                  )[0]
+                );
+              }}
+            >
+              Services
+            </p>
+            <p
+              onClick={() => {
+                this.scrollIntoSection(
+                  document.getElementsByClassName(
+                    `portfolio_${this.state.screen}`
+                  )[0]
+                );
+              }}
+            >
+              Projects
+            </p>
           </div>
         )}
         {this.state.screen === "mobile" && (
