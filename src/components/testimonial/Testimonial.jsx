@@ -2,6 +2,7 @@ import "./Testimonial.css";
 import angelRose from "../../images/testimonial/angel-rose.svg";
 import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
+import { EllipseGrid } from "../ellipse/Ellipse";
 import React, { Component, Fragment } from "react";
 
 class Testimonial extends Component {
@@ -49,7 +50,6 @@ class Testimonial extends Component {
           <h4 className="testimonial__header">Testimonial</h4>
           <h2 className="testimonial__subheader">People Talk about us</h2>
         </div>
-
         <Carousel
           className="testimonial__carousel"
           controls={false}
@@ -58,6 +58,8 @@ class Testimonial extends Component {
         >
           {this.appendCarouselItem()}
         </Carousel>
+        <EllipseGrid color="blue"/>
+        <EllipseGrid color="blue"/>
       </section>
     );
   }
