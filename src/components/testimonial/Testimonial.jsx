@@ -54,7 +54,7 @@ class Testimonial extends Component {
           className="testimonial__carousel"
           controls={false}
           indicators={false}
-          interval={null}
+          interval={8000}
         >
           {this.appendCarouselItem()}
         </Carousel>
