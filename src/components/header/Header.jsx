@@ -1,7 +1,7 @@
 import "./Header.css";
 import logo from "../../logoMobile.svg";
-import React, { Component } from "react";
 import Button from "../button/Button";
+import React, { Component } from "react";
 
 class Header extends Component {
   constructor() {
@@ -30,10 +30,10 @@ class Header extends Component {
 
   render() {
     return (
-      <header className="header">
+      <header className={`header_${this.state.screen}`}>
         <div className="header__logo-container">
-          <img className={`header__logo_${this.state.screen}`} src={logo} alt="" />
-          <div className={`header__logo-text_${this.state.screen}`}>
+          <img className="header__logo" src={logo} alt="" />
+          <div className="header__logo-text">
             <span>Agency</span> Creative
           </div>
         </div>
@@ -45,7 +45,6 @@ class Header extends Component {
             <p>Projects</p>
           </div>
         )}
-
         {this.state.screen === "mobile" && (
           <div className="header__hamburger-menu">
             <span></span>

@@ -1,5 +1,27 @@
 @import "./variables";
 
+@mixin header-logo-text($screen) {
+  font-family: "Quicksand";
+  max-width: min-content;
+  margin-left: 8px;
+  color: $main-black;
+  span {
+    font-weight: bold;
+    color: $main-black;
+  }
+  @if $screen == mobile {
+    font-size: 12px;
+    span {
+      font-size: 14px;
+    }
+  } @else {
+    font-size: 16px;
+    span {
+      font-size: 20px;
+    }
+  }
+}
+
 @mixin ellipse($red: true, $mobile: true) {
   border-radius: 50%;
   position: absolute;
