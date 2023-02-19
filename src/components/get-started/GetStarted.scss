@@ -2,7 +2,7 @@
 @import "../../helpers/mixins";
 .get-started_mobile {
   @include flexbox(column);
-  padding: 70px 20px 0px;
+  padding: 70px 20px;
 
   .get-started__image-container {
     position: relative;
@@ -21,6 +21,23 @@
       bottom: 0;
       left: 0;
       width: 65%;
+    }
+  }
+
+  .get-started__text-container {
+    @include flexbox(column);
+    padding-top: 35px;
+
+    .get-started__header {
+      font-size: 28px;
+    }
+
+    .get-started__text {
+      margin: 30px 0px;
+    }
+
+    .get-started__button {
+      @include button(mobile, full);
     }
   }
 }
