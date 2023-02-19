@@ -46,4 +46,65 @@
   box-shadow: 0px 4px 8px rgba(55, 125, 255, 0.5);
   padding: 10px 35px;
   font-size: 12px;
+}
+
+.get-started_desktop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 100px 100px 0px;
+}
+.get-started_desktop .get-started__image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  max-width: 665px;
+}
+.get-started_desktop .get-started__image-container .get-started-img-1 {
+  max-height: 70%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.get-started_desktop .get-started__image-container .get-started-img-2 {
+  max-height: 80%;
+  width: 60%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.get-started_desktop .get-started__text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.get-started_desktop .get-started__text-container .get-started__header {
+  font-size: 55px;
+  text-align: start;
+}
+.get-started_desktop .get-started__text-container .get-started__text {
+  font-size: 20px;
+  margin: 30px 0px;
+  text-align: start;
+}
+.get-started_desktop .get-started__text-container .get-started__button {
+  font-family: "Quicksand";
+  font-weight: 700;
+  border-radius: 24px;
+  color: #fff;
+  background-color: #377dff;
+  border: none;
+  box-shadow: 0px 4px 8px rgba(55, 125, 255, 0.5);
+  padding: 12px 50px;
+  font-size: 16px;
 }/*# sourceMappingURL=GetStarted.css.map */
