@@ -47,10 +47,9 @@
   @include flexbox(column);
   flex-direction: row-reverse;
   justify-content: space-between;
-  padding: 100px 100px 0px;
+  padding: 200px 100px 0px;
 
   .get-started__image-container {
-    @include flexbox(row);
     position: relative;
     width: 100%;
     height: 400px;
@@ -70,15 +69,34 @@
       bottom: 0;
       left: 0;
     }
+
+    .ellipse-grid_blue {
+      @include ellipse-grid;
+      top: 11%;
+      left: -10px;
+      width: 105px;
+      height: 75px;
+      justify-items: center;
+      align-items: center;
+
+      .ellipse-grid__ellipse_blue {
+        @include ellipse-grid-ellipse(main-blue);
+        width: 10px;
+        height: 10px
+      }
+    }
   }
 
   .get-started__text-container {
     @include flexbox(column);
     align-items: flex-start;
+    width: 100%;
 
     .get-started__header {
       font-size: 55px;
       text-align: start;
+      margin: 0;
+      max-width: 490px;
     }
 
     .get-started__text {

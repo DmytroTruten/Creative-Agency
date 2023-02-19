@@ -2,6 +2,7 @@ import "./GetStarted.css";
 import getStartedImage1 from "../../images/get-started/get-started-image1.svg";
 import getStartedImage2 from "../../images/get-started/get-started-image2.svg";
 import Button from "../button/Button";
+import { EllipseGrid } from "../ellipse/Ellipse";
 import React, { Component } from "react";
 
 class GetStarted extends Component {
@@ -33,10 +34,9 @@ class GetStarted extends Component {
     return (
       <section className={`get-started_${this.state.screen}`}>
         <div className="get-started__image-container">
-          <div>
-            <img className="get-started-img-1" src={getStartedImage1} alt="" />
-            <img className="get-started-img-2" src={getStartedImage2} alt="" />
-          </div>
+          <img className="get-started-img-1" src={getStartedImage1} alt="" />
+          <img className="get-started-img-2" src={getStartedImage2} alt="" />
+          <EllipseGrid color="blue" />
         </div>
         <div className="get-started__text-container">
           <h2 className="get-started__header">

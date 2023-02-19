@@ -55,13 +55,9 @@
   flex-direction: column;
   flex-direction: row-reverse;
   justify-content: space-between;
-  padding: 100px 100px 0px;
+  padding: 200px 100px 0px;
 }
 .get-started_desktop .get-started__image-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
   position: relative;
   width: 100%;
   height: 400px;
@@ -81,16 +77,39 @@
   bottom: 0;
   left: 0;
 }
+.get-started_desktop .get-started__image-container .ellipse-grid_blue {
+  display: grid;
+  grid-template: repeat(4, 1fr)/repeat(6, 1fr);
+  position: absolute;
+  z-index: -1;
+  top: 11%;
+  left: -10px;
+  width: 105px;
+  height: 75px;
+  justify-items: center;
+  align-items: center;
+}
+.get-started_desktop .get-started__image-container .ellipse-grid_blue .ellipse-grid__ellipse_blue {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #377dff;
+  width: 10px;
+  height: 10px;
+}
 .get-started_desktop .get-started__text-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
 }
 .get-started_desktop .get-started__text-container .get-started__header {
   font-size: 55px;
   text-align: start;
+  margin: 0;
+  max-width: 490px;
 }
 .get-started_desktop .get-started__text-container .get-started__text {
   font-size: 20px;
