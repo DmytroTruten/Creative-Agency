@@ -103,6 +103,7 @@
   flex-direction: row;
   margin-top: 50px;
   width: 100%;
+  background-color: #fff;
 }
 .testimonial_desktop .active.carousel-item,
 .testimonial_desktop .carousel-item-start,

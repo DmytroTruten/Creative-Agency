@@ -100,6 +100,7 @@
 }
 .services_desktop .services__text-container .services__read-more-container .services__read-more {
   font-size: 20px;
+  margin-bottom: 0;
 }
 .services_desktop .services__text-container .services__read-more-container .services__arrow-right {
   margin-left: 10px;
