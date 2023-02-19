@@ -1,0 +1,26 @@
+@import "../../helpers/variables";
+@import "../../helpers/mixins";
+.get-started_mobile {
+  @include flexbox(column);
+  padding: 70px 20px 0px;
+
+  .get-started__image-container {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+
+    .get-started-img-1 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+    }
+    .get-started-img-2 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 65%;
+    }
+  }
+}
