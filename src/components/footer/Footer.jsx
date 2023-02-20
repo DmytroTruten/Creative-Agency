@@ -1,5 +1,10 @@
 import "./Footer.css";
 import logo from "../../logoMobile.svg";
+import facebookIcon from "../../images/footer/facebook.svg";
+import instagramIcon from "../../images/footer/instagram.svg";
+import linkedinIcon from "../../images/footer/linkedin.svg";
+import gmailIcon from "../../images/footer/gmail.svg";
+import twitterIcon from "../../images/footer/twitter.svg";
 import React, { Component } from "react";
 
 class Footer extends Component {
@@ -60,6 +65,17 @@ class Footer extends Component {
           <p>Jl. KH. Wahid Hasyim Kel No.10D</p>
           <p>Jakarta, Indonesia</p>
           <p>team@OsirisRealEstate.com</p>
+        </div>
+        <div className="footer__social-links-container">
+          <div className="footer__social-links">
+            <img src={facebookIcon} alt="" />
+            <img src={instagramIcon} alt="" />
+            <img src={linkedinIcon} alt="" />
+            <img src={gmailIcon} alt="" />
+            <img src={twitterIcon} alt="" />
+          </div>
+          <span className="footer__splitting-line"></span>
+          <p className="footer__license">Copyright @ 2023 Agency Creative. All Right Reserved</p>
         </div>
       </footer>
     );
