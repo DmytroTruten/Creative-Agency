@@ -2,8 +2,8 @@
 @import "../../helpers/mixins";
 
 .footer_mobile {
-  display: grid;
-  grid-template: repeat(4, 1fr) / 1fr;
+  @include flexbox(column);
+  align-items: flex-start;
   background-color: #383638;
   padding: 45px 25px 50px;
 
@@ -34,18 +34,39 @@
   .footer__navigation,
   .footer__contacts,
   .footer__location {
-    p, span {
+    p,
+    span {
       color: #fff;
       font-family: "Quicksand";
+      line-height: 250%;
     }
 
     p {
       font-size: 16px;
     }
-  
+
     span {
       font-weight: 700;
       font-size: 18px;
     }
+  }
+
+  .footer__navigation {
+    @include flexbox(row);
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 80px;
+  }
+
+  .footer__contacts,
+  .footer__location {
+    @include flexbox(column);
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .footer__contacts {
+    margin: 45px 0px 30px;
   }
 }
