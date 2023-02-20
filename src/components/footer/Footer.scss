@@ -1,0 +1,51 @@
+@import "../../helpers/variables";
+@import "../../helpers/mixins";
+
+.footer_mobile {
+  display: grid;
+  grid-template: repeat(4, 1fr) / 1fr;
+  background-color: #383638;
+  padding: 45px 25px 50px;
+
+  .footer__header {
+    @include flexbox(row);
+    width: 187px;
+    height: 88px;
+    border-radius: 20px;
+    padding: 19px 25px;
+    background-color: #fff;
+
+    .footer__logo {
+      width: 53px;
+      height: 50px;
+    }
+
+    .footer__logo-text {
+      font-family: "Quicksand";
+      font-size: 16px;
+      margin-left: 10px;
+      span {
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .footer__navigation,
+  .footer__contacts,
+  .footer__location {
+    p, span {
+      color: #fff;
+      font-family: "Quicksand";
+    }
+
+    p {
+      font-size: 16px;
+    }
+  
+    span {
+      font-weight: 700;
+      font-size: 18px;
+    }
+  }
+}

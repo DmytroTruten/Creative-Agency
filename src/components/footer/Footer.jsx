@@ -1,0 +1,69 @@
+import "./Footer.css";
+import logo from "../../logoMobile.svg";
+import React, { Component } from "react";
+
+class Footer extends Component {
+  constructor() {
+    super();
+    this.state = {
+      screen: "",
+    };
+  }
+
+  setFooterState = () => {
+    if (window.innerWidth <= 768 && this.state.screen !== "mobile") {
+      this.setState({
+        screen: "mobile",
+      });
+    } else if (window.innerWidth > 768 && this.state.screen !== "desktop") {
+      this.setState({
+        screen: "desktop",
+      });
+    }
+  };
+
+  componentDidMount() {
+    this.setFooterState();
+    window.addEventListener("resize", this.setFooterState);
+  }
+
+  render() {
+    return (
+      <footer className={`footer_${this.state.screen}`}>
+        <div className="footer__header">
+          <img className="footer__logo" src={logo} alt="" />
+          <div className="footer__logo-text">
+            <span>Agency</span> Creative
+          </div>
+        </div>
+        <div className="footer__navigation">
+          <div className="terms-and-policies">
+            <span>Terms & Policies</span>
+            <p>Terms of Service</p>
+            <p>Privacy Policy</p>
+          </div>
+          <div className="navigation">
+            <span>Company</span>
+            <p>Home</p>
+            <p>About Us</p>
+            <p>Contact Us</p>
+          </div>
+        </div>
+        <div className="footer__contacts">
+          <span>Contact</span>
+          <p>(+62) 893912392190</p>
+          <p>agecnycr@gmail.com</p>
+        </div>
+        <div className="footer__location">
+          <span>Location</span>
+          <p>PT Osiris Real Estate International</p>
+          <p>Jl. KH. Wahid Hasyim Kel No.10D</p>
+          <p>Jakarta, Indonesia</p>
+          <p>team@OsirisRealEstate.com</p>
+        </div>
+      </footer>
+    );
+  }
+}
+
+export default Footer;

@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 70px 20px;
+  padding: 70px 20px 100px;
 }
 .get-started_mobile .get-started__image-container {
   position: relative;

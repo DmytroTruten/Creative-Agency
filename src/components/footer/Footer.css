@@ -1,0 +1,49 @@
+.footer_mobile {
+  display: grid;
+  grid-template: repeat(4, 1fr)/1fr;
+  background-color: #383638;
+  padding: 45px 25px 50px;
+}
+.footer_mobile .footer__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 187px;
+  height: 88px;
+  border-radius: 20px;
+  padding: 19px 25px;
+  background-color: #fff;
+}
+.footer_mobile .footer__header .footer__logo {
+  width: 53px;
+  height: 50px;
+}
+.footer_mobile .footer__header .footer__logo-text {
+  font-family: "Quicksand";
+  font-size: 16px;
+  margin-left: 10px;
+}
+.footer_mobile .footer__header .footer__logo-text span {
+  font-size: 20px;
+  font-weight: 700;
+}
+.footer_mobile .footer__navigation p, .footer_mobile .footer__navigation span,
+.footer_mobile .footer__contacts p,
+.footer_mobile .footer__contacts span,
+.footer_mobile .footer__location p,
+.footer_mobile .footer__location span {
+  color: #fff;
+  font-family: "Quicksand";
+}
+.footer_mobile .footer__navigation p,
+.footer_mobile .footer__contacts p,
+.footer_mobile .footer__location p {
+  font-size: 16px;
+}
+.footer_mobile .footer__navigation span,
+.footer_mobile .footer__contacts span,
+.footer_mobile .footer__location span {
+  font-weight: 700;
+  font-size: 18px;
+}/*# sourceMappingURL=Footer.css.map */
