@@ -37,6 +37,10 @@ class GetStarted extends Component {
           <img className="get-started-img-1" src={getStartedImage1} alt="" />
           <img className="get-started-img-2" src={getStartedImage2} alt="" />
           <EllipseGrid color="blue" />
+          <div className="ellipse-grid-red-container">
+            <EllipseGrid color="red" />
+            <EllipseGrid color="red" />
+          </div>
         </div>
         <div className="get-started__text-container">
           <h2 className="get-started__header">

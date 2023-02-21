@@ -97,6 +97,34 @@
   width: 10px;
   height: 10px;
 }
+.get-started_desktop .get-started__image-container .ellipse-grid-red-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: absolute;
+  bottom: 50px;
+  right: 80px;
+  width: 210px;
+  height: 70px;
+}
+.get-started_desktop .get-started__image-container .ellipse-grid-red-container .ellipse-grid_red {
+  display: grid;
+  grid-template: repeat(4, 1fr)/repeat(6, 1fr);
+  position: absolute;
+  z-index: -1;
+  position: relative;
+  width: 105px;
+  height: 70px;
+  justify-items: center;
+  align-items: center;
+}
+.get-started_desktop .get-started__image-container .ellipse-grid-red-container .ellipse-grid_red .ellipse-grid__ellipse_red {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ff5c00;
+}
 .get-started_desktop .get-started__text-container {
   display: flex;
   align-items: center;

@@ -82,7 +82,29 @@
       .ellipse-grid__ellipse_blue {
         @include ellipse-grid-ellipse(main-blue);
         width: 10px;
-        height: 10px
+        height: 10px;
+      }
+    }
+
+    .ellipse-grid-red-container {
+      @include flexbox(row);
+      position: absolute;
+      bottom: 50px;
+      right: 80px;
+      width: 210px;
+      height: 70px;
+
+      .ellipse-grid_red {
+        @include ellipse-grid;
+        position: relative;
+        width: 105px;
+        height: 70px;
+        justify-items: center;
+        align-items: center;
+
+        .ellipse-grid__ellipse_red {
+          @include ellipse-grid-ellipse(main-red);
+        }
       }
     }
   }
