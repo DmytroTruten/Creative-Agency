@@ -70,7 +70,6 @@
   .footer__contacts,
   .footer__location {
     @include flexbox(column);
-    justify-content: flex-start;
     align-items: flex-start;
   }
 
@@ -168,7 +167,8 @@
   }
 
   .footer__contacts,
-  .footer__location {
+  .footer__location,
+  .terms-and-policies {
     @include flexbox(column);
     justify-content: flex-start;
     align-items: flex-start;
@@ -199,6 +199,22 @@
       color: #fff;
       font-size: 18px;
       font-weight: 300;
+    }
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .footer_desktop {
+    .footer__body {
+      display: grid;
+      grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+      max-width: 800px;
+      width: 100%;
+
+      .terms-and-policies,
+      .footer__contacts {
+        align-items: flex-end;
+      }
     }
   }
 }
