@@ -55,7 +55,7 @@
   flex-direction: column;
   flex-direction: row-reverse;
   justify-content: space-between;
-  padding: 200px 100px 0px;
+  padding: 200px 100px 180px;
 }
 .get-started_desktop .get-started__image-container {
   position: relative;
@@ -134,7 +134,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 100px 100px 0px;
+    padding: 100px 100px 180px;
   }
   .get-started__text-container {
     display: flex;

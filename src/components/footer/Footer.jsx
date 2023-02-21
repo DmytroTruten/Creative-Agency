@@ -35,36 +35,48 @@ class Footer extends Component {
   render() {
     return (
       <footer className={`footer_${this.state.screen}`}>
-        <div className="footer__header">
-          <img className="footer__logo" src={logo} alt="" />
-          <div className="footer__logo-text">
-            <span>Agency</span> Creative
+        <div className="footer__body">
+          <div className="footer__header">
+            <img className="footer__logo" src={logo} alt="" />
+            <div className="footer__logo-text">
+              <span>Agency</span> Creative
+            </div>
           </div>
-        </div>
-        <div className="footer__navigation">
-          <div className="terms-and-policies">
-            <span>Terms & Policies</span>
-            <p>Terms of Service</p>
-            <p>Privacy Policy</p>
+          <div className="footer__navigation">
+            <div className="terms-and-policies">
+              <span>Terms & Policies</span>
+              <p>Terms of Service</p>
+              <p>Privacy Policy</p>
+            </div>
+            {this.state.screen === "mobile" && (
+              <div className="navigation">
+                <span>Company</span>
+                <p>Home</p>
+                <p>About Us</p>
+                <p>Contact Us</p>
+              </div>
+            )}
           </div>
-          <div className="navigation">
-            <span>Company</span>
-            <p>Home</p>
-            <p>About Us</p>
-            <p>Contact Us</p>
+          {this.state.screen === "desktop" && (
+            <div className="navigation">
+              <span>Company</span>
+              <p>Home</p>
+              <p>About Us</p>
+              <p>Contact Us</p>
+            </div>
+          )}
+          <div className="footer__contacts">
+            <span>Contact</span>
+            <p>(+62) 893912392190</p>
+            <p>agecnycr@gmail.com</p>
           </div>
-        </div>
-        <div className="footer__contacts">
-          <span>Contact</span>
-          <p>(+62) 893912392190</p>
-          <p>agecnycr@gmail.com</p>
-        </div>
-        <div className="footer__location">
-          <span>Location</span>
-          <p>PT Osiris Real Estate International</p>
-          <p>Jl. KH. Wahid Hasyim Kel No.10D</p>
-          <p>Jakarta, Indonesia</p>
-          <p>team@OsirisRealEstate.com</p>
+          <div className="footer__location">
+            <span>Location</span>
+            <p>PT Osiris Real Estate International</p>
+            <p>Jl. KH. Wahid Hasyim Kel No.10D</p>
+            <p>Jakarta, Indonesia</p>
+            <p>team@OsirisRealEstate.com</p>
+          </div>
         </div>
         <div className="footer__social-links-container">
           <div className="footer__social-links">
@@ -75,7 +87,9 @@ class Footer extends Component {
             <img src={twitterIcon} alt="" />
           </div>
           <span className="footer__splitting-line"></span>
-          <p className="footer__license">Copyright @ 2023 Agency Creative. All Right Reserved</p>
+          <p className="footer__license">
+            Copyright @ 2023 Agency Creative. All Right Reserved
+          </p>
         </div>
       </footer>
     );
