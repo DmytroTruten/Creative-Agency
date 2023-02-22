@@ -1,5 +1,5 @@
 import "./Ellipse.css";
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 export class Ellipse extends Component {
   constructor() {
@@ -28,14 +28,16 @@ export class Ellipse extends Component {
 
   render() {
     return (
-      <div>
+      <Fragment>
         {this.props.grid === "true" && (
           <div className={`ellipse-grid__ellipse_${this.props.color}`}></div>
         )}
         {this.props.grid === "false" && (
-          <div className={`ellipse_${this.props.color}_${this.state.screen}`}></div>
+          <div
+            className={`ellipse_${this.props.color}_${this.state.screen}`}
+          ></div>
         )}
-      </div>
+      </Fragment>
     );
   }
 }
