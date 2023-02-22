@@ -15,6 +15,14 @@ class Footer extends Component {
     };
   }
 
+  scrollIntoSection = (section) => {
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "start",
+    });
+  };
+
   setFooterState = () => {
     if (window.innerWidth <= 768 && this.state.screen !== "mobile") {
       this.setState({
@@ -51,18 +59,68 @@ class Footer extends Component {
             {this.state.screen === "mobile" && (
               <div className="navigation">
                 <span>Company</span>
-                <p>Home</p>
-                <p>About Us</p>
-                <p>Contact Us</p>
+                <p
+                  onClick={() => {
+                    this.scrollIntoSection(
+                      document.querySelector(`.main_${this.state.screen}`)
+                    );
+                  }}
+                >
+                  Home
+                </p>
+                <p
+                  onClick={() => {
+                    this.scrollIntoSection(
+                      document.querySelector(`.about_${this.state.screen}`)
+                    );
+                  }}
+                >
+                  About Us
+                </p>
+                <p
+                  onClick={() => {
+                    this.scrollIntoSection(
+                      document.querySelector(
+                        `.testimonial_${this.state.screen}`
+                      )
+                    );
+                  }}
+                >
+                  Contact Us
+                </p>
               </div>
             )}
           </div>
           {this.state.screen === "desktop" && (
             <div className="navigation">
               <span>Company</span>
-              <p>Home</p>
-              <p>About Us</p>
-              <p>Contact Us</p>
+              <p
+                onClick={() => {
+                  this.scrollIntoSection(
+                    document.querySelector(`.main_${this.state.screen}`)
+                  );
+                }}
+              >
+                Home
+              </p>
+              <p
+                onClick={() => {
+                  this.scrollIntoSection(
+                    document.querySelector(`.about_${this.state.screen}`)
+                  );
+                }}
+              >
+                About Us
+              </p>
+              <p
+                onClick={() => {
+                  this.scrollIntoSection(
+                    document.querySelector(`.testimonial_${this.state.screen}`)
+                  );
+                }}
+              >
+                Contact Us
+              </p>
             </div>
           )}
           <div className="footer__contacts">

@@ -12,7 +12,7 @@
   flex-direction: column;
   width: 100%;
   max-width: 600px;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-between;
 }
 .footer_mobile .footer__header {
@@ -129,7 +129,7 @@
   justify-content: center;
   flex-direction: row;
   width: 100%;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-between;
 }
 .footer_desktop .footer__header {
@@ -192,6 +192,10 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+}
+.footer_desktop .terms-and-policies p,
+.footer_desktop .navigation p {
+  cursor: pointer;
 }
 .footer_desktop .footer__social-links-container {
   display: flex;

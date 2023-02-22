@@ -47,13 +47,19 @@ class Header extends Component {
         </div>
         {this.state.screen === "desktop" && (
           <div className="header__navbar">
-            <p>Home</p>
             <p
               onClick={() => {
                 this.scrollIntoSection(
-                  document.getElementsByClassName(
-                    `about_${this.state.screen}`
-                  )[0]
+                  document.querySelector(`.main_${this.state.screen}`)
+                );
+              }}
+            >
+              Home
+            </p>
+            <p
+              onClick={() => {
+                this.scrollIntoSection(
+                  document.querySelector(`.about_${this.state.screen}`)
                 );
               }}
             >
@@ -62,9 +68,7 @@ class Header extends Component {
             <p
               onClick={() => {
                 this.scrollIntoSection(
-                  document.getElementsByClassName(
-                    `services_${this.state.screen}`
-                  )[0]
+                  document.querySelector(`.services_${this.state.screen}`)
                 );
               }}
             >
@@ -73,9 +77,7 @@ class Header extends Component {
             <p
               onClick={() => {
                 this.scrollIntoSection(
-                  document.getElementsByClassName(
-                    `portfolio_${this.state.screen}`
-                  )[0]
+                  document.querySelector(`.portfolio_${this.state.screen}`)
                 );
               }}
             >
