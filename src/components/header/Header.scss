@@ -5,6 +5,7 @@
   @include flexbox(row);
   justify-content: space-between;
   padding: 40px 20px 0px;
+  position: relative;
 
   .header__logo-container {
     @include flexbox(row);
@@ -16,9 +17,11 @@
 
   .header__hamburger-menu {
     @include flexbox(column);
+    position: relative; 
     justify-content: space-evenly;
     width: 30px;
     height: 26px;
+    z-index: 100;
     span {
       border-radius: 10px;
       height: 2px;
@@ -31,6 +34,28 @@
         width: 50%;
       }
     }
+  }
+
+  .header__sidenav_closed {
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 1;
+    transition: .5s ease-in-out;
+  }
+
+  .header__sidenav_opened {
+    @include flexbox(column);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: cyan;
+    width: 50%;
+    z-index: 1;
+    transition: .5s ease-in-out;
   }
 }
 

@@ -5,6 +5,7 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 40px 20px 0px;
+  position: relative;
 }
 .header_mobile .header__logo-container {
   display: flex;
@@ -33,9 +34,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
   justify-content: space-evenly;
   width: 30px;
   height: 26px;
+  z-index: 100;
 }
 .header_mobile .header__hamburger-menu span {
   border-radius: 10px;
@@ -47,6 +50,29 @@
 }
 .header_mobile .header__hamburger-menu span:nth-child(2) {
   width: 50%;
+}
+.header_mobile .header__sidenav_closed {
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 1;
+  transition: 0.5s ease-in-out;
+}
+.header_mobile .header__sidenav_opened {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background-color: cyan;
+  width: 50%;
+  z-index: 1;
+  transition: 0.5s ease-in-out;
 }
 
 .header_desktop {

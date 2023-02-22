@@ -8,6 +8,7 @@ class Header extends Component {
     super();
     this.state = {
       screen: "",
+      sidenavVisible: false,
     };
   }
 
@@ -19,50 +20,13 @@ class Header extends Component {
     });
   };
 
-  appendNavigationLinks = () => {
-    return (
-      <Fragment>
-        <p
-          onClick={() => {
-            this.scrollIntoSection(
-              document.querySelector(`.main_${this.state.screen}`)
-            );
-          }}
-        >
-          Home
-        </p>
-        <p
-          onClick={() => {
-            this.scrollIntoSection(
-              document.querySelector(`.about_${this.state.screen}`)
-            );
-          }}
-        >
-          About
-        </p>
-        <p
-          onClick={() => {
-            this.scrollIntoSection(
-              document.querySelector(`.services_${this.state.screen}`)
-            );
-          }}
-        >
-          Services
-        </p>
-        <p
-          onClick={() => {
-            this.scrollIntoSection(
-              document.querySelector(`.portfolio_${this.state.screen}`)
-            );
-          }}
-        >
-          Projects
-        </p>
-      </Fragment>
-    );
+  toggleSidenav = () => {
+    this.setState((previousState) => ({
+      sidenavVisible: !previousState.sidenavVisible,
+    }));
   };
 
-  setHeaderState = () => {
+  handleHeaderState = () => {
     if (window.innerWidth <= 768 && this.state.screen !== "mobile") {
       this.setState({
         screen: "mobile",
@@ -75,8 +39,8 @@ class Header extends Component {
   };
 
   componentDidMount() {
-    this.setHeaderState();
-    window.addEventListener("resize", this.setHeaderState);
+    this.handleHeaderState();
+    window.addEventListener("resize", this.handleHeaderState);
   }
 
   render() {
@@ -88,18 +52,65 @@ class Header extends Component {
             <span>Agency</span> Creative
           </div>
         </div>
-        {this.state.screen === "desktop" && (
-          <div className="header__navbar">{this.appendNavigationLinks()}</div>
-        )}
         {this.state.screen === "mobile" && (
-          <div className="header__hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+          <Fragment>
+            <div
+              onClick={this.toggleSidenav}
+              className="header__hamburger-menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div
+              className={`header__sidenav_${
+                this.state.sidenavVisible ? "opened" : "closed"
+              }`}
+            ></div>
+          </Fragment>
         )}
         {this.state.screen === "desktop" && (
-          <Button className="header__contact-button" text="Contact Us" />
+          <Fragment>
+            <div className="header__navbar">
+              <p
+                onClick={() => {
+                  this.scrollIntoSection(
+                    document.querySelector(`.main_${this.state.screen}`)
+                  );
+                }}
+              >
+                Home
+              </p>
+              <p
+                onClick={() => {
+                  this.scrollIntoSection(
+                    document.querySelector(`.about_${this.state.screen}`)
+                  );
+                }}
+              >
+                About
+              </p>
+              <p
+                onClick={() => {
+                  this.scrollIntoSection(
+                    document.querySelector(`.services_${this.state.screen}`)
+                  );
+                }}
+              >
+                Services
+              </p>
+              <p
+                onClick={() => {
+                  this.scrollIntoSection(
+                    document.querySelector(`.portfolio_${this.state.screen}`)
+                  );
+                }}
+              >
+                Projects
+              </p>
+            </div>
+            <Button className="header__contact-button" text="Contact Us" />
+          </Fragment>
         )}
       </header>
     );
