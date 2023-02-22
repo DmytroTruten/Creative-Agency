@@ -5,7 +5,7 @@ import instagramIcon from "../../images/footer/instagram.svg";
 import linkedinIcon from "../../images/footer/linkedin.svg";
 import gmailIcon from "../../images/footer/gmail.svg";
 import twitterIcon from "../../images/footer/twitter.svg";
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 class Footer extends Component {
   constructor() {
@@ -23,7 +23,41 @@ class Footer extends Component {
     });
   };
 
-  setFooterState = () => {
+  appendNavigationLinks = () => {
+    return (
+      <Fragment>
+        <p
+          onClick={() => {
+            this.scrollIntoSection(
+              document.querySelector(`.main_${this.state.screen}`)
+            );
+          }}
+        >
+          Home
+        </p>
+        <p
+          onClick={() => {
+            this.scrollIntoSection(
+              document.querySelector(`.about_${this.state.screen}`)
+            );
+          }}
+        >
+          About Us
+        </p>
+        <p
+          onClick={() => {
+            this.scrollIntoSection(
+              document.querySelector(`.testimonial_${this.state.screen}`)
+            );
+          }}
+        >
+          Contact Us
+        </p>
+      </Fragment>
+    );
+  };
+
+  handleFooterState = () => {
     if (window.innerWidth <= 768 && this.state.screen !== "mobile") {
       this.setState({
         screen: "mobile",
@@ -36,8 +70,8 @@ class Footer extends Component {
   };
 
   componentDidMount() {
-    this.setFooterState();
-    window.addEventListener("resize", this.setFooterState);
+    this.handleFooterState();
+    window.addEventListener("resize", this.handleFooterState);
   }
 
   render() {
@@ -59,68 +93,14 @@ class Footer extends Component {
             {this.state.screen === "mobile" && (
               <div className="navigation">
                 <span>Company</span>
-                <p
-                  onClick={() => {
-                    this.scrollIntoSection(
-                      document.querySelector(`.main_${this.state.screen}`)
-                    );
-                  }}
-                >
-                  Home
-                </p>
-                <p
-                  onClick={() => {
-                    this.scrollIntoSection(
-                      document.querySelector(`.about_${this.state.screen}`)
-                    );
-                  }}
-                >
-                  About Us
-                </p>
-                <p
-                  onClick={() => {
-                    this.scrollIntoSection(
-                      document.querySelector(
-                        `.testimonial_${this.state.screen}`
-                      )
-                    );
-                  }}
-                >
-                  Contact Us
-                </p>
+                {this.appendNavigationLinks()}
               </div>
             )}
           </div>
           {this.state.screen === "desktop" && (
             <div className="navigation">
               <span>Company</span>
-              <p
-                onClick={() => {
-                  this.scrollIntoSection(
-                    document.querySelector(`.main_${this.state.screen}`)
-                  );
-                }}
-              >
-                Home
-              </p>
-              <p
-                onClick={() => {
-                  this.scrollIntoSection(
-                    document.querySelector(`.about_${this.state.screen}`)
-                  );
-                }}
-              >
-                About Us
-              </p>
-              <p
-                onClick={() => {
-                  this.scrollIntoSection(
-                    document.querySelector(`.testimonial_${this.state.screen}`)
-                  );
-                }}
-              >
-                Contact Us
-              </p>
+              {this.appendNavigationLinks()}
             </div>
           )}
           <div className="footer__contacts">

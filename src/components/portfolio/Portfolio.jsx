@@ -14,7 +14,7 @@ class Portfolio extends Component {
     };
   }
 
-  updatePortfolioState = () => {
+  handlePortfolioState = () => {
     if (window.innerWidth <= 768 && this.state.screen !== "mobile") {
       this.setState({
         screen: "mobile",
@@ -27,8 +27,8 @@ class Portfolio extends Component {
   };
 
   componentDidMount() {
-    this.updatePortfolioState();
-    window.addEventListener("resize", this.updatePortfolioState);
+    this.handlePortfolioState();
+    window.addEventListener("resize", this.handlePortfolioState);
   }
 
   render() {

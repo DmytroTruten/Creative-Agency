@@ -1,7 +1,7 @@
 import "./Header.css";
 import logo from "../../logoMobile.svg";
 import Button from "../button/Button";
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 class Header extends Component {
   constructor() {
@@ -17,6 +17,49 @@ class Header extends Component {
       block: "nearest",
       inline: "start",
     });
+  };
+
+  appendNavigationLinks = () => {
+    return (
+      <Fragment>
+        <p
+          onClick={() => {
+            this.scrollIntoSection(
+              document.querySelector(`.main_${this.state.screen}`)
+            );
+          }}
+        >
+          Home
+        </p>
+        <p
+          onClick={() => {
+            this.scrollIntoSection(
+              document.querySelector(`.about_${this.state.screen}`)
+            );
+          }}
+        >
+          About
+        </p>
+        <p
+          onClick={() => {
+            this.scrollIntoSection(
+              document.querySelector(`.services_${this.state.screen}`)
+            );
+          }}
+        >
+          Services
+        </p>
+        <p
+          onClick={() => {
+            this.scrollIntoSection(
+              document.querySelector(`.portfolio_${this.state.screen}`)
+            );
+          }}
+        >
+          Projects
+        </p>
+      </Fragment>
+    );
   };
 
   setHeaderState = () => {
@@ -46,44 +89,7 @@ class Header extends Component {
           </div>
         </div>
         {this.state.screen === "desktop" && (
-          <div className="header__navbar">
-            <p
-              onClick={() => {
-                this.scrollIntoSection(
-                  document.querySelector(`.main_${this.state.screen}`)
-                );
-              }}
-            >
-              Home
-            </p>
-            <p
-              onClick={() => {
-                this.scrollIntoSection(
-                  document.querySelector(`.about_${this.state.screen}`)
-                );
-              }}
-            >
-              About
-            </p>
-            <p
-              onClick={() => {
-                this.scrollIntoSection(
-                  document.querySelector(`.services_${this.state.screen}`)
-                );
-              }}
-            >
-              Services
-            </p>
-            <p
-              onClick={() => {
-                this.scrollIntoSection(
-                  document.querySelector(`.portfolio_${this.state.screen}`)
-                );
-              }}
-            >
-              Projects
-            </p>
-          </div>
+          <div className="header__navbar">{this.appendNavigationLinks()}</div>
         )}
         {this.state.screen === "mobile" && (
           <div className="header__hamburger-menu">

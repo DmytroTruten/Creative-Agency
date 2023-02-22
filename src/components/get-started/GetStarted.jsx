@@ -13,7 +13,7 @@ class GetStarted extends Component {
     };
   }
 
-  setHeaderState = () => {
+  handleHeaderState = () => {
     if (window.innerWidth <= 768 && this.state.screen !== "mobile") {
       this.setState({
         screen: "mobile",
@@ -26,8 +26,8 @@ class GetStarted extends Component {
   };
 
   componentDidMount() {
-    this.setHeaderState();
-    window.addEventListener("resize", this.setHeaderState);
+    this.handleHeaderState();
+    window.addEventListener("resize", this.handleHeaderState);
   }
 
   render() {

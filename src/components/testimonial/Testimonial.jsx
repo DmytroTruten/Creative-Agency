@@ -13,7 +13,7 @@ class Testimonial extends Component {
     };
   }
 
-  updateTestimonialState = () => {
+  handleTestimonialState = () => {
     if (window.innerWidth <= 768 && this.state.screen !== "mobile") {
       this.setState({
         screen: "mobile",
@@ -26,8 +26,8 @@ class Testimonial extends Component {
   };
 
   componentDidMount() {
-    this.updateTestimonialState();
-    window.addEventListener("resize", this.updateTestimonialState);
+    this.handleTestimonialState();
+    window.addEventListener("resize", this.handleTestimonialState);
   }
 
   appendCarouselItem = () => {

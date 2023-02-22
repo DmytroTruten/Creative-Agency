@@ -9,7 +9,7 @@ export class Ellipse extends Component {
     };
   }
 
-  updateEllipseState = () => {
+  handleEllipseState = () => {
     if (window.innerWidth <= 768 && this.state.screen !== "mobile") {
       this.setState({
         screen: "mobile",
@@ -22,8 +22,8 @@ export class Ellipse extends Component {
   };
 
   componentDidMount() {
-    this.updateEllipseState();
-    window.addEventListener("resize", this.updateEllipseState);
+    this.handleEllipseState();
+    window.addEventListener("resize", this.handleEllipseState);
   }
 
   render() {

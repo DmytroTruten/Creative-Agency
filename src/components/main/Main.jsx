@@ -14,7 +14,7 @@ class Main extends Component {
     };
   }
 
-  updateMainState = () => {
+  handleMainState = () => {
     if (window.innerWidth <= 768 && this.state.screen !== "mobile") {
       this.setState({
         screen: "mobile",
@@ -27,8 +27,8 @@ class Main extends Component {
   };
 
   componentDidMount() {
-    this.updateMainState();
-    window.addEventListener("resize", this.updateMainState);
+    this.handleMainState();
+    window.addEventListener("resize", this.handleMainState);
   }
 
   render() {

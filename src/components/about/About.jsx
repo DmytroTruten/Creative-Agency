@@ -12,7 +12,7 @@ class About extends Component {
     };
   }
 
-  updateAboutState = () => {
+  handleAboutState = () => {
     if (window.innerWidth <= 768 && this.state.screen !== "mobile") {
       this.setState({
         screen: "mobile",
@@ -25,8 +25,8 @@ class About extends Component {
   };
 
   componentDidMount() {
-    this.updateAboutState();
-    window.addEventListener("resize", this.updateAboutState);
+    this.handleAboutState();
+    window.addEventListener("resize", this.handleAboutState);
   }
 
   render() {
