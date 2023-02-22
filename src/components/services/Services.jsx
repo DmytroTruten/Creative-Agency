@@ -3,7 +3,7 @@ import socialMedia from "../../images/services/social-media.svg";
 import searchEngine from "../../images/services/search-engine.svg";
 import design from "../../images/services/design.svg";
 import ads from "../../images/services/ads.svg";
-import arrowRight from "../../images/arrow-right.svg";
+import arrowRight from "../../images/services/arrow-right.svg";
 import React, { Component } from "react";
 
 class Services extends Component {

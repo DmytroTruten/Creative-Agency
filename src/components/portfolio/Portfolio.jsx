@@ -40,7 +40,7 @@ class Portfolio extends Component {
             <h2 className="portfolio__subheader">What do we do</h2>
           </div>
           <p className="portfolio__text">
-            all projects that we have already done , proven can help to use more
+            all projects that we have already done, proven can help to use more
             comfortable, then can used by client from our business
           </p>
         </div>

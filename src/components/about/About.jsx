@@ -1,5 +1,5 @@
 import "./About.css";
-import aboutImage from "../../images/about-image.svg";
+import aboutImage from "../../images/about/about-image.svg";
 import React, { Component } from "react";
 import Button from "../button/Button";
 import { EllipseGrid } from "../ellipse/Ellipse";

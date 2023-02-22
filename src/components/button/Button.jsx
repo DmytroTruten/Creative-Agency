@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import playIcon from "../../images/play-circle.svg"
+import playIcon from "../../images/about/play-circle.svg"
 
 class Button extends Component {
   render() {

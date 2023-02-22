@@ -1,7 +1,7 @@
 import "./Main.css";
-import mainImage from "../../images/main-image.svg";
-import mainReview from "../../images/main-review.svg";
-import mainRate from "../../images/main-rate.svg";
+import mainImage from "../../images/main/main-image.svg";
+import mainReview from "../../images/main/main-review.svg";
+import mainRate from "../../images/main/main-rate.svg";
 import React, { Component } from "react";
 import Button from "../button/Button";
 import { Ellipse, EllipseGrid } from "../ellipse/Ellipse";
