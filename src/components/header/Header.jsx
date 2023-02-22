@@ -12,7 +12,11 @@ class Header extends Component {
   }
 
   scrollIntoSection = (section) => {
-    section.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "start",
+    });
   };
 
   setHeaderState = () => {
@@ -43,13 +47,7 @@ class Header extends Component {
         </div>
         {this.state.screen === "desktop" && (
           <div className="header__navbar">
-            <p
-              onClick={() => {
-                this.scrollIntoSection("home");
-              }}
-            >
-              Home
-            </p>
+            <p>Home</p>
             <p
               onClick={() => {
                 this.scrollIntoSection(
