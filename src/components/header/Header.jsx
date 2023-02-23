@@ -68,7 +68,51 @@ class Header extends Component {
               className={`header__sidenav${
                 this.state.sidenavVisible ? "_opened" : ""
               }`}
-            ></div>
+            >
+              <Fragment>
+                <div className="header__navbar">
+                  <p
+                    onClick={() => {
+                      this.scrollIntoSection(
+                        document.querySelector(`.main_${this.state.screen}`)
+                      );
+                    }}
+                  >
+                    Home
+                  </p>
+                  <p
+                    onClick={() => {
+                      this.scrollIntoSection(
+                        document.querySelector(`.about_${this.state.screen}`)
+                      );
+                    }}
+                  >
+                    About
+                  </p>
+                  <p
+                    onClick={() => {
+                      this.scrollIntoSection(
+                        document.querySelector(`.services_${this.state.screen}`)
+                      );
+                    }}
+                  >
+                    Services
+                  </p>
+                  <p
+                    onClick={() => {
+                      this.scrollIntoSection(
+                        document.querySelector(
+                          `.portfolio_${this.state.screen}`
+                        )
+                      );
+                    }}
+                  >
+                    Projects
+                  </p>
+                </div>
+                <Button className="header__contact-button" text="Contact Us" />
+              </Fragment>
+            </div>
           </Fragment>
         )}
         {this.state.screen === "desktop" && (
