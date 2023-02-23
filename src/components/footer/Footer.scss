@@ -210,6 +210,14 @@
   }
 }
 
+@media (max-width: 345px) {
+  .footer_mobile {
+    .footer__social-links-container {
+      height: 120px;
+    }
+  }
+}
+
 @media (min-width: 769px) and (max-width: 1200px) {
   .footer_desktop {
     .footer__body {
