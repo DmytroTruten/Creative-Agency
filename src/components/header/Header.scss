@@ -26,6 +26,7 @@
       border-radius: 10px;
       height: 2px;
       background-color: $main-black;
+      transition: all .3s ease-in-out;
       &:nth-child(1),
       &:nth-child(3) {
         width: 70%;
@@ -34,9 +35,24 @@
         width: 50%;
       }
     }
+
+    &.active {
+      span {
+        &:nth-child(1) {
+          transform: rotate(45deg);
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+        &:nth-child(2) {
+          transform: translateX(-10px);
+          opacity: 0;
+        }
+      }
+    }
   }
 
-  .header__sidenav_closed {
+  .header__sidenav {
     width: 0;
     position: fixed;
     top: 0;

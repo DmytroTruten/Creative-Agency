@@ -44,6 +44,7 @@
   border-radius: 10px;
   height: 2px;
   background-color: #1d1d1d;
+  transition: all 0.3s ease-in-out;
 }
 .header_mobile .header__hamburger-menu span:nth-child(1), .header_mobile .header__hamburger-menu span:nth-child(3) {
   width: 70%;
@@ -51,7 +52,17 @@
 .header_mobile .header__hamburger-menu span:nth-child(2) {
   width: 50%;
 }
-.header_mobile .header__sidenav_closed {
+.header_mobile .header__hamburger-menu.active span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.header_mobile .header__hamburger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+.header_mobile .header__hamburger-menu.active span:nth-child(2) {
+  transform: translateX(-10px);
+  opacity: 0;
+}
+.header_mobile .header__sidenav {
   width: 0;
   position: fixed;
   top: 0;

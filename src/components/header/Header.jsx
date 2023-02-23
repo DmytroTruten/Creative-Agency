@@ -56,15 +56,17 @@ class Header extends Component {
           <Fragment>
             <div
               onClick={this.toggleSidenav}
-              className="header__hamburger-menu"
+              className={`header__hamburger-menu${
+                this.state.sidenavVisible ? " active" : ""
+              }`}
             >
               <span></span>
               <span></span>
               <span></span>
             </div>
             <div
-              className={`header__sidenav_${
-                this.state.sidenavVisible ? "opened" : "closed"
+              className={`header__sidenav${
+                this.state.sidenavVisible ? "_opened" : ""
               }`}
             ></div>
           </Fragment>
