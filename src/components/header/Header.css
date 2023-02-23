@@ -69,13 +69,13 @@
   flex-direction: column;
   justify-content: space-evenly;
   width: 0;
-  opacity: 0;
   position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
   z-index: 1;
   transition: 0.5s ease-in-out;
+  opacity: 0;
 }
 .header_mobile .header__sidenav .header__navbar {
   display: flex;
@@ -106,14 +106,15 @@
   justify-content: center;
   flex-direction: column;
   justify-content: space-evenly;
+  width: 0;
   position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
-  background-color: cyan;
-  width: 60%;
   z-index: 1;
   transition: 0.5s ease-in-out;
+  background-color: cyan;
+  width: 60%;
 }
 .header_mobile .header__sidenav_opened .header__navbar {
   display: flex;

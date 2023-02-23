@@ -53,59 +53,14 @@
   }
 
   .header__sidenav {
-    @include flexbox(column);
-    justify-content: space-evenly;
-    width: 0;
+    @include header-sidenav;
     opacity: 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    z-index: 1;
-    transition: 0.5s ease-in-out;
-
-    .header__navbar {
-      @include flexbox(column);
-      justify-content: space-between;
-      height: 30%;
-      p {
-        font-size: 20px;
-        font-weight: 700;
-      }
-    }
-
-    .header__contact-button {
-      @include button(mobile, hollow);
-      width: 135px;
-    }
   }
 
   .header__sidenav_opened {
-    @include flexbox(column);
-    justify-content: space-evenly;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
+    @include header-sidenav;
     background-color: cyan;
     width: 60%;
-    z-index: 1;
-    transition: 0.5s ease-in-out;
-
-    .header__navbar {
-      @include flexbox(column);
-      justify-content: space-between;
-      height: 30%;
-      p {
-        font-size: 20px;
-        font-weight: 700;
-      }
-    }
-
-    .header__contact-button {
-      @include button(mobile, hollow);
-      width: 135px;
-    }
   }
 }
 

@@ -22,6 +22,33 @@
   }
 }
 
+@mixin header-sidenav {
+  @include flexbox(column);
+  justify-content: space-evenly;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 1;
+  transition: 0.5s ease-in-out;
+
+  .header__navbar {
+    @include flexbox(column);
+    justify-content: space-between;
+    height: 30%;
+    p {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+
+  .header__contact-button {
+    @include button(mobile, hollow);
+    width: 135px;
+  }
+}
+
 @mixin ellipse($red: true, $mobile: true) {
   border-radius: 50%;
   position: absolute;
