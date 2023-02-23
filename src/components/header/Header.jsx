@@ -1,6 +1,5 @@
 import "./Header.css";
 import logo from "../../logoMobile.svg";
-import Button from "../button/Button";
 import Navigation from "../navigation/Navigation";
 import React, { Component, Fragment } from "react";
 
@@ -62,58 +61,16 @@ class Header extends Component {
                 this.state.sidenavVisible ? "_opened" : ""
               }`}
             >
-              <Fragment>
-                <div className="header__navbar">
-                  <p
-                    onClick={() => {
-                      this.scrollIntoSection(
-                        document.querySelector(`.main_${this.state.screen}`)
-                      );
-                      this.toggleSidenav();
-                    }}
-                  >
-                    Home
-                  </p>
-                  <p
-                    onClick={() => {
-                      this.scrollIntoSection(
-                        document.querySelector(`.about_${this.state.screen}`)
-                      );
-                      this.toggleSidenav();
-                    }}
-                  >
-                    About
-                  </p>
-                  <p
-                    onClick={() => {
-                      this.scrollIntoSection(
-                        document.querySelector(`.services_${this.state.screen}`)
-                      );
-                      this.toggleSidenav();
-                    }}
-                  >
-                    Services
-                  </p>
-                  <p
-                    onClick={() => {
-                      this.scrollIntoSection(
-                        document.querySelector(
-                          `.portfolio_${this.state.screen}`
-                        )
-                      );
-                      this.toggleSidenav();
-                    }}
-                  >
-                    Projects
-                  </p>
-                </div>
-                <Button className="header__contact-button" text="Contact Us" />
-              </Fragment>
+              <Navigation
+                for="sidenav-mobile"
+                screen={this.state.screen}
+                toggleSidenav={this.toggleSidenav}
+              />
             </div>
           </Fragment>
         )}
         {this.state.screen === "desktop" && (
-          <Navigation screen={this.state.screen} />
+          <Navigation for="navbar-desktop" screen={this.state.screen} />
         )}
       </header>
     );
