@@ -5,7 +5,8 @@ import instagramIcon from "../../images/footer/instagram.svg";
 import linkedinIcon from "../../images/footer/linkedin.svg";
 import gmailIcon from "../../images/footer/gmail.svg";
 import twitterIcon from "../../images/footer/twitter.svg";
-import React, { Component, Fragment } from "react";
+import Navigation from "../navigation/Navigation";
+import React, { Component } from "react";
 
 class Footer extends Component {
   constructor() {
@@ -21,40 +22,6 @@ class Footer extends Component {
       block: "nearest",
       inline: "start",
     });
-  };
-
-  appendNavigationLinks = () => {
-    return (
-      <Fragment>
-        <p
-          onClick={() => {
-            this.scrollIntoSection(
-              document.querySelector(`.main_${this.state.screen}`)
-            );
-          }}
-        >
-          Home
-        </p>
-        <p
-          onClick={() => {
-            this.scrollIntoSection(
-              document.querySelector(`.about_${this.state.screen}`)
-            );
-          }}
-        >
-          About Us
-        </p>
-        <p
-          onClick={() => {
-            this.scrollIntoSection(
-              document.querySelector(`.testimonial_${this.state.screen}`)
-            );
-          }}
-        >
-          Contact Us
-        </p>
-      </Fragment>
-    );
   };
 
   handleFooterState = () => {
@@ -93,14 +60,14 @@ class Footer extends Component {
             {this.state.screen === "mobile" && (
               <div className="navigation">
                 <span>Company</span>
-                {this.appendNavigationLinks()}
+                <Navigation for="footer" screen={this.state.screen}/>
               </div>
             )}
           </div>
           {this.state.screen === "desktop" && (
             <div className="navigation">
               <span>Company</span>
-              {this.appendNavigationLinks()}
+              <Navigation for="footer" screen={this.state.screen}/>
             </div>
           )}
           <div className="footer__contacts">

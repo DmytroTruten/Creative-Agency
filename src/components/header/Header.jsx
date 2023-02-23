@@ -1,6 +1,7 @@
 import "./Header.css";
 import logo from "../../logoMobile.svg";
 import Navigation from "../navigation/Navigation";
+import Button from "../button/Button";
 import React, { Component, Fragment } from "react";
 
 class Header extends Component {
@@ -66,11 +67,15 @@ class Header extends Component {
                 screen={this.state.screen}
                 toggleSidenav={this.toggleSidenav}
               />
+              <Button className="header__contact-button" text="Contact Us" />
             </div>
           </Fragment>
         )}
         {this.state.screen === "desktop" && (
-          <Navigation for="navbar-desktop" screen={this.state.screen} />
+          <Fragment>
+            <Navigation for="navbar-desktop" screen={this.state.screen} />
+            <Button className="header__contact-button" text="Contact Us" />
+          </Fragment>
         )}
       </header>
     );
