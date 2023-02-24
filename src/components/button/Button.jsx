@@ -1,17 +1,13 @@
-import React, { Component } from "react";
-import playIcon from "../../images/about/play-circle.svg"
+import React from "react";
+import playIcon from "../../images/about/play-circle.svg";
 
-class Button extends Component {
-  render() {
-    return (
-      <button className={this.props.className}>
-        {this.props.play === 'true' && (
-          <img src={playIcon} alt="" />
-        )}
-        {this.props.text}
-      </button>
-    );
-  }
+function Button(props) {
+  return (
+    <button className={props.className}>
+      {props.play === "true" && <img src={playIcon} alt="" />}
+      {props.text}
+    </button>
+  );
 }
 
 export default Button;
