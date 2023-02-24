@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Navigation extends Component {
-  scrollIntoSection = (section) => {
+function Navigation(props) {
+  const scrollIntoSection = (section) => {
     section.scrollIntoView({
       behavior: "smooth",
       block: "nearest",
@@ -9,23 +9,21 @@ class Navigation extends Component {
     });
   };
 
-  appendNavigationLinks = () => {
+  const appendNavigationLinks = () => {
     let linksArray = [];
     const sectionsArray = ["main", "about", "services", "portfolio"];
     const linksNamesArray = ["Home", "About", "Services", "Projects"];
     const footerSectionsArray = ["main", "about", "get-started"];
     const footerLinksNamesArray = ["Home", "About Us", "Contact Us"];
 
-    if (this.props.for === "navbar-desktop") {
+    if (props.for === "navbar-desktop") {
       for (let i = 0; i < sectionsArray.length; i++) {
         linksArray.push(
           <p
             key={i}
             onClick={() => {
-              this.scrollIntoSection(
-                document.querySelector(
-                  `.${sectionsArray[i]}_${this.props.screen}`
-                )
+              scrollIntoSection(
+                document.querySelector(`.${sectionsArray[i]}_${props.screen}`)
               );
             }}
           >
@@ -33,33 +31,31 @@ class Navigation extends Component {
           </p>
         );
       }
-    } else if (this.props.for === "sidenav-mobile") {
+    } else if (props.for === "sidenav-mobile") {
       for (let i = 0; i < sectionsArray.length; i++) {
         linksArray.push(
           <p
             key={i}
             onClick={() => {
-              this.scrollIntoSection(
-                document.querySelector(
-                  `.${sectionsArray[i]}_${this.props.screen}`
-                )
+              scrollIntoSection(
+                document.querySelector(`.${sectionsArray[i]}_${props.screen}`)
               );
-              this.props.toggleSidenav();
+              props.toggleSidenav();
             }}
           >
             {linksNamesArray[i]}
           </p>
         );
       }
-    } else if (this.props.for === "footer") {
+    } else if (props.for === "footer") {
       for (let i = 0; i < footerSectionsArray.length; i++) {
         linksArray.push(
           <p
             key={i}
             onClick={() => {
-              this.scrollIntoSection(
+              scrollIntoSection(
                 document.querySelector(
-                  `.${footerSectionsArray[i]}_${this.props.screen}`
+                  `.${footerSectionsArray[i]}_${props.screen}`
                 )
               );
             }}
@@ -72,9 +68,7 @@ class Navigation extends Component {
     return linksArray;
   };
 
-  render() {
-    return <div className="header__navbar">{this.appendNavigationLinks()}</div>;
-  }
+  return <div className="header__navbar">{appendNavigationLinks()}</div>;
 }
 
 export default Navigation;

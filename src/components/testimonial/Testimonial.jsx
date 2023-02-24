@@ -3,72 +3,65 @@ import angelRose from "../../images/testimonial/angel-rose.svg";
 import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
 import { EllipseGrid } from "../ellipse/Ellipse";
-import React, { Component, Fragment } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 
-class Testimonial extends Component {
-  constructor() {
-    super();
-    this.state = {
-      screen: "",
+function Testimonial() {
+  const [screen, setScreenState] = useState("");
+
+  useEffect(() => {
+    handleTestimonialState();
+    window.addEventListener("resize", handleTestimonialState);
+
+    return () => {
+      window.removeEventListener("resize", handleTestimonialState);
     };
-  }
+  }, []);
 
-  handleTestimonialState = () => {
-    if (window.innerWidth <= 768 && this.state.screen !== "mobile") {
-      this.setState({
-        screen: "mobile",
-      });
-    } else if (window.innerWidth > 768 && this.state.screen !== "desktop") {
-      this.setState({
-        screen: "desktop",
-      });
+  const handleTestimonialState = () => {
+    if (window.innerWidth <= 768) {
+      setScreenState("mobile");
+    } else if (window.innerWidth > 768) {
+      setScreenState("desktop");
     }
   };
 
-  componentDidMount() {
-    this.handleTestimonialState();
-    window.addEventListener("resize", this.handleTestimonialState);
-  }
-
-  appendCarouselItem = () => {
+  const appendCarouselItem = () => {
     let carouselItemArray = [];
     for (let i = 0; i < 3; i++) {
       carouselItemArray.push(
         <Carousel.Item key={i}>
-          {this.state.screen === "mobile" && <TestimonialCard quantity="1" />}
-          {this.state.screen === "desktop" && <TestimonialCard quantity="3" />}
+          {screen === "mobile" && <TestimonialCard quantity="1" />}
+          {screen === "desktop" && <TestimonialCard quantity="3" />}
         </Carousel.Item>
       );
     }
     return carouselItemArray;
   };
 
-  render() {
-    return (
-      <section className={`testimonial_${this.state.screen}`}>
-        <div className="testimonial__header-container">
-          <h4 className="testimonial__header">Testimonial</h4>
-          <h2 className="testimonial__subheader">People Talk about us</h2>
-        </div>
-        <Carousel
-          className="testimonial__carousel"
-          controls={false}
-          indicators={false}
-          interval={8000}
-        >
-          {this.appendCarouselItem()}
-        </Carousel>
-        <EllipseGrid color="blue"/>
-        <EllipseGrid color="blue"/>
-      </section>
-    );
-  }
+  return (
+    <section className={`testimonial_${screen}`}>
+      <div className="testimonial__header-container">
+        <h4 className="testimonial__header">Testimonial</h4>
+        <h2 className="testimonial__subheader">People Talk about us</h2>
+      </div>
+      <Carousel
+        className="testimonial__carousel"
+        controls={false}
+        indicators={false}
+        interval={8000}
+      >
+        {appendCarouselItem()}
+      </Carousel>
+      <EllipseGrid color="blue" />
+      <EllipseGrid color="blue" />
+    </section>
+  );
 }
 
-class TestimonialCard extends Component {
-  appendCards = () => {
+function TestimonialCard(props) {
+  const appendCards = () => {
     let cardsArray = [];
-    for (let i = 0; i < this.props.quantity; i++) {
+    for (let i = 0; i < props.quantity; i++) {
       cardsArray.push(
         <Card key={i}>
           <Card.Body>
@@ -90,9 +83,7 @@ class TestimonialCard extends Component {
     return cardsArray;
   };
 
-  render() {
-    return <Fragment>{this.appendCards()}</Fragment>;
-  }
+  return <Fragment>{appendCards()}</Fragment>;
 }
 
 export default Testimonial;
