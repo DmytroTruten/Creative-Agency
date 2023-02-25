@@ -1,0 +1,21 @@
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0px auto 0px 25px;
+  width: 50px;
+  height: 20px;
+  position: relative;
+  background-color: #ccc;
+  border-radius: 35px;
+}
+
+.slider {
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+}/*# sourceMappingURL=ToggleSwitch.css.map */

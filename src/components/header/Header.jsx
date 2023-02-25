@@ -2,6 +2,7 @@ import "./Header.css";
 import logo from "../../logoMobile.svg";
 import Navigation from "../navigation/Navigation";
 import Button from "../button/Button";
+import ToggleSwitch from "../toggle-switch/ToggleSwitch";
 import React, { Fragment, useState, useEffect } from "react";
 
 function Header() {
@@ -48,6 +49,7 @@ function Header() {
             <span></span>
           </div>
           <div className={`header__sidenav${sidenavVisible ? "_opened" : ""}`}>
+            <ToggleSwitch />
             <Navigation
               for="sidenav-mobile"
               screen={screen}

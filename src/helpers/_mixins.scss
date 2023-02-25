@@ -24,12 +24,13 @@
 
 @mixin header-sidenav {
   @include flexbox(column);
-  justify-content: space-evenly;
+  padding: 20px 0px;
+  justify-content: space-between;
   width: 0;
+  height: 100%;
   position: fixed;
   top: 0;
   right: 0;
-  height: 100%;
   z-index: 1;
   overflow-x: hidden;
   transition: 0.5s ease-in-out;
