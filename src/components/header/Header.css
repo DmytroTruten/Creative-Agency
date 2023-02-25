@@ -4,8 +4,12 @@
   justify-content: center;
   flex-direction: row;
   justify-content: space-between;
-  padding: 40px 20px 0px;
-  position: relative;
+  padding: 10px 20px;
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 2px solid rgba(55, 125, 255, 0.5);
 }
 .header_mobile .header__logo-container {
   display: flex;
@@ -52,6 +56,9 @@
 .header_mobile .header__hamburger-menu span:nth-child(2) {
   width: 50%;
 }
+.header_mobile .header__hamburger-menu.active span {
+  background-color: #fff;
+}
 .header_mobile .header__hamburger-menu.active span:nth-child(1) {
   transform: rotate(45deg);
 }
@@ -88,6 +95,7 @@
 .header_mobile .header__sidenav .header__navbar p {
   font-size: 20px;
   font-weight: 700;
+  color: #fff;
 }
 .header_mobile .header__sidenav .header__contact-button {
   font-family: "Quicksand";
@@ -99,6 +107,8 @@
   padding: 10px 35px;
   font-size: 12px;
   width: 140px;
+  color: #fff;
+  border: 1px solid #fff;
 }
 .header_mobile .header__sidenav_opened {
   display: flex;
@@ -114,7 +124,7 @@
   z-index: 1;
   overflow-x: hidden;
   transition: 0.5s ease-in-out;
-  background-color: cyan;
+  background-color: #377dff;
   width: 60%;
 }
 .header_mobile .header__sidenav_opened .header__navbar {
@@ -128,6 +138,7 @@
 .header_mobile .header__sidenav_opened .header__navbar p {
   font-size: 20px;
   font-weight: 700;
+  color: #fff;
 }
 .header_mobile .header__sidenav_opened .header__contact-button {
   font-family: "Quicksand";
@@ -139,6 +150,8 @@
   padding: 10px 35px;
   font-size: 12px;
   width: 140px;
+  color: #fff;
+  border: 1px solid #fff;
 }
 
 .header_desktop {

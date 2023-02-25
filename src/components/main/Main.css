@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 70px 10px 20px;
+  padding: 100px 10px 20px;
 }
 .main_mobile .main__text-container {
   display: flex;

@@ -4,7 +4,7 @@
 // Main Mobile
 .main_mobile {
   @include flexbox(column);
-  padding: 70px 10px 20px;
+  padding: 100px 10px 20px;
 
   .main__text-container {
     @include flexbox(column);
