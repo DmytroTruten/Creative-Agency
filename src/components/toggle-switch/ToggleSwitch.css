@@ -1,21 +1,45 @@
-.toggle-switch {
+.toggle-switch_light {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  justify-content: flex-start;
   margin: 0px auto 0px 25px;
   width: 50px;
   height: 20px;
   position: relative;
   background-color: #ccc;
   border-radius: 35px;
+  transition: background-color 0.3s ease-in-out;
 }
-
-.slider {
+.toggle-switch_light .slider {
   width: 25px;
   height: 25px;
   background-color: #fff;
   border-radius: 50%;
   position: absolute;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.toggle-switch_dark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0px auto 0px 25px;
+  width: 50px;
+  height: 20px;
+  position: relative;
+  background-color: rgb(117, 117, 117);
+  border-radius: 35px;
+  transition: background-color 0.3s ease-in-out;
+}
+.toggle-switch_dark .slider {
+  width: 25px;
+  height: 25px;
+  background-color: rgb(48, 48, 48);
+  border-radius: 50%;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(50%);
 }/*# sourceMappingURL=ToggleSwitch.css.map */

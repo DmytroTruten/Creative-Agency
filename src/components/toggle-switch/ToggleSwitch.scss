@@ -1,21 +1,44 @@
 @import "../../helpers/variables";
 @import "../../helpers/mixins";
 
-.toggle-switch {
+.toggle-switch_light {
   @include flexbox(row);
-  justify-content: flex-start;
   margin: 0px auto 0px 25px;
   width: 50px;
   height: 20px;
   position: relative;
   background-color: #ccc;
   border-radius: 35px;
+  transition: background-color 0.3s ease-in-out;
+
+  .slider {
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+  }
 }
 
-.slider {
-  width: 25px;
-  height: 25px;
-  background-color: #fff;
-  border-radius: 50%;
-  position: absolute;
+.toggle-switch_dark {
+  @include flexbox(row);
+  margin: 0px auto 0px 25px;
+  width: 50px;
+  height: 20px;
+  position: relative;
+  background-color: rgb(117, 117, 117);
+  border-radius: 35px;
+  transition: background-color 0.3s ease-in-out;
+
+  .slider {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(48, 48, 48);
+    border-radius: 50%;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(50%);
+  }
 }

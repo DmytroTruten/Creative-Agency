@@ -1,9 +1,17 @@
 import "./ToggleSwitch.css"
-import React from "react";
+import React, { useState } from "react";
 
-function ToggleSwitch() {
+function ToggleSwitch(props) {
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    props.onThemeChange(newTheme);
+  }
+
   return(
-    <div className="toggle-switch">
+    <div className={`toggle-switch_${theme}`} onClick={toggleTheme}>
       <div className="slider"></div>
     </div>
   )
