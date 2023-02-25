@@ -85,6 +85,7 @@
 }
 .footer_mobile .footer__location {
   margin: 0px 25px 90px;
+  text-align: left;
 }
 .footer_mobile .footer__social-links-container {
   display: flex;

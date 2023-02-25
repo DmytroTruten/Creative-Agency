@@ -72,10 +72,10 @@
   position: fixed;
   top: 0;
   right: 0;
-  height: 100vh;
+  height: 100%;
   z-index: 1;
+  overflow-x: hidden;
   transition: 0.5s ease-in-out;
-  opacity: 0;
 }
 .header_mobile .header__sidenav .header__navbar {
   display: flex;
@@ -98,7 +98,7 @@
   background-color: transparent;
   padding: 10px 35px;
   font-size: 12px;
-  width: 135px;
+  width: 140px;
 }
 .header_mobile .header__sidenav_opened {
   display: flex;
@@ -110,8 +110,9 @@
   position: fixed;
   top: 0;
   right: 0;
-  height: 100vh;
+  height: 100%;
   z-index: 1;
+  overflow-x: hidden;
   transition: 0.5s ease-in-out;
   background-color: cyan;
   width: 60%;
@@ -137,7 +138,7 @@
   background-color: transparent;
   padding: 10px 35px;
   font-size: 12px;
-  width: 135px;
+  width: 140px;
 }
 
 .header_desktop {

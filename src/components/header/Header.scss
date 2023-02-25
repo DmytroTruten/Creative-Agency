@@ -54,7 +54,6 @@
 
   .header__sidenav {
     @include header-sidenav;
-    opacity: 0;
   }
 
   .header__sidenav_opened {

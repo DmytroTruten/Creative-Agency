@@ -231,7 +231,7 @@
   margin-right: 10px;
 }
 
-@media (min-width: 340px) {
+@media (min-width: 350px) {
   .about__buttons-container {
     flex-direction: row !important;
   }
