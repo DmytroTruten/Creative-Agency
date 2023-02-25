@@ -66,6 +66,15 @@
     background-color: $main-blue;
     width: 60%;
   }
+
+  .sidenav__backpanel {
+    @include sidenav__backpanel;
+    background-color: transparent;
+  }
+  .sidenav__backpanel_opened {
+    @include sidenav__backpanel;
+    background-color: rgb(0, 0, 0, 0.4);
+  }
 }
 
 .header_desktop {

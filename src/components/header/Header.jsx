@@ -9,9 +9,9 @@ function Header() {
   const [sidenavVisible, setSidenavState] = useState(false);
 
   useEffect(() => {
-    handleHeaderState()
+    handleHeaderState();
     window.addEventListener("resize", handleHeaderState);
-    
+
     return () => {
       window.removeEventListener("resize", handleHeaderState);
     };
@@ -23,8 +23,8 @@ function Header() {
     } else if (window.innerWidth > 768) {
       setScreenState("desktop");
     }
-  }
-  
+  };
+
   return (
     <header className={`header_${screen}`}>
       <div className="header__logo-container">
@@ -57,6 +57,9 @@ function Header() {
             />
             <Button className="header__contact-button" text="Contact Us" />
           </div>
+          <div
+            className={`sidenav__backpanel${sidenavVisible ? "_opened" : ""}`}
+          ></div>
         </Fragment>
       )}
       {screen === "desktop" && (

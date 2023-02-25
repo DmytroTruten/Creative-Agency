@@ -153,6 +153,24 @@
   color: #fff;
   border: 1px solid #fff;
 }
+.header_mobile .sidenav__backpanel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease-in-out;
+  background-color: transparent;
+}
+.header_mobile .sidenav__backpanel_opened {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.4);
+}
 
 .header_desktop {
   display: flex;

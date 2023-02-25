@@ -53,6 +53,15 @@
   }
 }
 
+@mixin sidenav__backpanel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease-in-out;
+}
+
 @mixin ellipse($red: true, $mobile: true) {
   border-radius: 50%;
   position: absolute;
