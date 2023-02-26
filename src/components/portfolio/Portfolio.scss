@@ -85,9 +85,13 @@
     .design-furniture-img,
     .design-byte-img {
       width: 85%;
+      position: relative;
+      z-index: 5;
     }
     .cloud-img {
       width: 97%;
+      position: relative;
+      z-index: 5;
     }
 
     .ellipse-grid_pink {

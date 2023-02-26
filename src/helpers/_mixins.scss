@@ -101,7 +101,7 @@
   display: grid;
   grid-template: repeat(4, 1fr) / repeat(6, 1fr);
   position: absolute;
-  z-index: -1;
+  z-index: 0;
 }
 
 @mixin ellipse-grid-ellipse($color) {

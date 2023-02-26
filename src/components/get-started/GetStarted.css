@@ -69,6 +69,7 @@
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 5;
 }
 .get-started_desktop .get-started__image-container .get-started-img-2 {
   max-height: 80%;
@@ -76,12 +77,13 @@
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: 5;
 }
 .get-started_desktop .get-started__image-container .ellipse-grid_blue {
   display: grid;
   grid-template: repeat(4, 1fr)/repeat(6, 1fr);
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   top: 11%;
   left: -10px;
   width: 105px;
@@ -112,7 +114,7 @@
   display: grid;
   grid-template: repeat(4, 1fr)/repeat(6, 1fr);
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   position: relative;
   width: 105px;
   height: 70px;

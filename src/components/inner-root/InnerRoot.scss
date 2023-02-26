@@ -1,16 +1,25 @@
+@import "../../helpers/variables";
+@import "../../helpers/mixins";
+
 .inner-root_light,
 .inner-root_dark,
 .header_mobile,
+.ellipse-grid__ellipse_blue,
 p,
 h1,
 h2,
 h4,
-span {
+span,
+button {
   transition: all 0.3s ease-in-out;
 }
 
 .inner-root_dark {
   background-color: #0d0d0d;
+
+  .ellipse-grid__ellipse_blue {
+    background-color: #e2e2e2 !important;
+  }
 
   h1,
   h2,
@@ -29,5 +38,18 @@ span {
         background-color: #e2e2e2;
       }
     }
+  }
+
+  .main__start-project-button,
+  .about__button,
+  .get-started__button {
+    background-color: #e2e2e2 !important;
+    color: #0d0d0d !important;
+  }
+
+  .header__contact-button,
+  .about__play-button {
+    border: 1px solid #e2e2e2 !important;
+    color: #e2e2e2 !important;
   }
 }

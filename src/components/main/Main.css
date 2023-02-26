@@ -40,6 +40,8 @@
   width: 95%;
   border-radius: 12px;
   margin: 12px 0px;
+  position: relative;
+  z-index: 4;
 }
 .main_mobile .main__image-container .main__review-image {
   position: absolute;
@@ -48,6 +50,7 @@
   right: 0;
   bottom: 0;
   border-radius: 6px;
+  z-index: 5;
 }
 .main_mobile .main__image-container .main__rate-image {
   position: absolute;
@@ -56,6 +59,7 @@
   left: 0;
   width: 30%;
   border-radius: 6px;
+  z-index: 5;
 }
 .main_mobile .main__start-project-button {
   font-family: "Quicksand";
@@ -75,7 +79,7 @@
   display: grid;
   grid-template: repeat(4, 1fr)/repeat(6, 1fr);
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   top: 0;
   right: 0;
   width: 30%;
@@ -92,7 +96,7 @@
   display: grid;
   grid-template: repeat(4, 1fr)/repeat(6, 1fr);
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   left: 0;
   bottom: 0;
   width: 30%;
@@ -162,6 +166,8 @@
 .main_desktop .main__image-container .main__image {
   width: 100%;
   border-radius: 50px;
+  position: relative;
+  z-index: 4;
 }
 .main_desktop .main__image-container .main__review-image {
   position: absolute;
@@ -170,6 +176,7 @@
   right: 20px;
   bottom: 40px;
   border-radius: 16px;
+  z-index: 5;
 }
 .main_desktop .main__image-container .main__rate-image {
   position: absolute;
@@ -179,12 +186,13 @@
   width: 18%;
   height: 16%;
   border-radius: 16px;
+  z-index: 5;
 }
 .main_desktop .main__image-container .ellipse-grid_red {
   display: grid;
   grid-template: repeat(4, 1fr)/repeat(6, 1fr);
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   top: 89%;
   left: 22%;
   width: 15%;
@@ -202,7 +210,7 @@
   display: grid;
   grid-template: repeat(4, 1fr)/repeat(6, 1fr);
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   top: -4%;
   left: 18%;
   width: 15%;

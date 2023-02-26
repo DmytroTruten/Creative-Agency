@@ -1,16 +1,21 @@
 .inner-root_light,
 .inner-root_dark,
 .header_mobile,
+.ellipse-grid__ellipse_blue,
 p,
 h1,
 h2,
 h4,
-span {
+span,
+button {
   transition: all 0.3s ease-in-out;
 }
 
 .inner-root_dark {
   background-color: #0d0d0d;
+}
+.inner-root_dark .ellipse-grid__ellipse_blue {
+  background-color: #e2e2e2 !important;
 }
 .inner-root_dark h1,
 .inner-root_dark h2,
@@ -25,4 +30,15 @@ span {
 }
 .inner-root_dark .header_mobile .header__hamburger-menu span {
   background-color: #e2e2e2;
+}
+.inner-root_dark .main__start-project-button,
+.inner-root_dark .about__button,
+.inner-root_dark .get-started__button {
+  background-color: #e2e2e2 !important;
+  color: #0d0d0d !important;
+}
+.inner-root_dark .header__contact-button,
+.inner-root_dark .about__play-button {
+  border: 1px solid #e2e2e2 !important;
+  color: #e2e2e2 !important;
 }/*# sourceMappingURL=InnerRoot.css.map */
