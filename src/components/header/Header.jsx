@@ -31,7 +31,8 @@ function Header(props) {
       <div className="header__logo-container">
         <img className="header__logo" src={logo} alt="" />
         <div className="header__logo-text">
-          <span>Agency</span> Creative
+          <span>Agency</span>
+          <p>Creative</p>
         </div>
       </div>
       {screen === "mobile" && (

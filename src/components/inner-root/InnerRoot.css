@@ -1,0 +1,28 @@
+.inner-root_light,
+.inner-root_dark,
+.header_mobile,
+p,
+h1,
+h2,
+h4,
+span {
+  transition: all 0.3s ease-in-out;
+}
+
+.inner-root_dark {
+  background-color: #0d0d0d;
+}
+.inner-root_dark h1,
+.inner-root_dark h2,
+.inner-root_dark h4,
+.inner-root_dark p,
+.inner-root_dark span {
+  color: #e2e2e2 !important;
+}
+.inner-root_dark .header_mobile {
+  background-color: #0d0d0d;
+  border-bottom: 1px solid #818181;
+}
+.inner-root_dark .header_mobile .header__hamburger-menu span {
+  background-color: #e2e2e2;
+}/*# sourceMappingURL=InnerRoot.css.map */
