@@ -28,7 +28,7 @@
 
 @mixin header-sidenav {
   @include flexbox(column);
-  padding: 20px 0px;
+  padding: 22px 0px;
   justify-content: space-between;
   width: 0;
   height: 100%;
@@ -172,4 +172,42 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 30px;
   box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+@mixin toggle-switch($screen, $theme) {
+  @include flexbox(row);
+  width: 50px;
+  height: 20px;
+  position: relative;
+  border-radius: 35px;
+  transition: background-color 0.3s ease-in-out;
+  .slider {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  @if $screen == mobile {
+    margin: 0px auto 0px 25px;
+  } @else {
+    margin-right: 20px;
+
+    @if $theme == light {
+      background-color: #ccc;
+      .slider {
+        background-color: #fff;
+        transform: translateX(-55%);
+        border: 2px solid #ccc;
+      }
+    } @else {
+      background-color: rgb(117, 117, 117);
+      .slider {
+        background-color: rgb(48, 48, 48);
+        transform: translateX(55%);
+        border: 2px solid rgb(117, 117, 117);
+      }
+    }
+  }
 }

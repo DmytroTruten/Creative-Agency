@@ -68,7 +68,10 @@ function Header(props) {
       {screen === "desktop" && (
         <Fragment>
           <Navigation for="navbar-desktop" screen={screen} />
-          <Button className="header__contact-button" text="Contact Us" />
+          <div className="header__right-section">
+            <ToggleSwitch onThemeChange={props.onThemeChange} />
+            <Button className="header__contact-button" text="Contact Us" />
+          </div>
         </Fragment>
       )}
     </header>

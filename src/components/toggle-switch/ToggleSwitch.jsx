@@ -1,4 +1,3 @@
-import "./ToggleSwitch.css"
 import React, { useState } from "react";
 
 function ToggleSwitch(props) {
