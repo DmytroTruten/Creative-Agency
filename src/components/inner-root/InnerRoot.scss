@@ -5,16 +5,16 @@
 .inner-root_dark,
 .header_mobile,
 .ellipse-grid__ellipse_blue,
+.about__play-circle,
+.services__arrow-right,
 p,
 h1,
 h2,
 h4,
 span,
 button {
-  transition: 
-    color 0.3s ease-in-out, 
-    background-color 0.3s ease-in-out,
-    border 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    border 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
 .inner-root_dark {
@@ -29,7 +29,7 @@ button {
   h4,
   p,
   span {
-    color: #e2e2e2;
+    color: #e2e2e2 !important;
   }
 
   .header_mobile {
@@ -51,8 +51,37 @@ button {
   }
 
   .header__contact-button,
-  .about__play-button {
+  .about__play-button,
+  .portfolio__button {
     border: 1px solid #e2e2e2 !important;
     color: #e2e2e2 !important;
+  }
+
+  .testimonial__carousel {
+    background-color: transparent !important;
+    z-index: 5;
+    .card {
+      background-color: #0b0f15 !important;
+
+      .card-name {
+        color: #e2e2e2;
+      }
+
+      .card-position {
+        color: #e2e2e280;
+      }
+    }
+  }
+
+  .about__play-circle,
+  .services__arrow-right {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(4%)
+      hue-rotate(219deg) contrast(77%);
+  }
+
+  .footer__logo-text {
+    span {
+      color: #1d1d1d !important;
+    }
   }
 }
