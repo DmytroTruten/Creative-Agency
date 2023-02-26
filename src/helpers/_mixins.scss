@@ -188,12 +188,25 @@
     position: absolute;
     transition: all 0.3s ease-in-out;
   }
-  
+
   @if $screen == mobile {
     margin: 0px auto 0px 25px;
+    @if $theme == light {
+      background-color: #ccc;
+      .slider {
+        background-color: #fff;
+        transform: translateX(-55%);
+      }
+    } @else {
+      background-color: rgb(117, 117, 117);
+      .slider {
+        background-color: rgb(48, 48, 48);
+        transform: translateX(55%);
+      }
+    }
   } @else {
     margin-right: 20px;
-
+    cursor: pointer;
     @if $theme == light {
       background-color: #ccc;
       .slider {

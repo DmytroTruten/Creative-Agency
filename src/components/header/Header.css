@@ -188,6 +188,7 @@
   border-radius: 35px;
   transition: background-color 0.3s ease-in-out;
   margin: 0px auto 0px 25px;
+  background-color: #ccc;
 }
 .header_mobile .toggle-switch_light .slider {
   width: 25px;
@@ -195,6 +196,10 @@
   border-radius: 50%;
   position: absolute;
   transition: all 0.3s ease-in-out;
+}
+.header_mobile .toggle-switch_light .slider {
+  background-color: #fff;
+  transform: translateX(-55%);
 }
 .header_mobile .toggle-switch_dark {
   display: flex;
@@ -207,6 +212,7 @@
   border-radius: 35px;
   transition: background-color 0.3s ease-in-out;
   margin: 0px auto 0px 25px;
+  background-color: rgb(117, 117, 117);
 }
 .header_mobile .toggle-switch_dark .slider {
   width: 25px;
@@ -214,6 +220,10 @@
   border-radius: 50%;
   position: absolute;
   transition: all 0.3s ease-in-out;
+}
+.header_mobile .toggle-switch_dark .slider {
+  background-color: rgb(48, 48, 48);
+  transform: translateX(55%);
 }
 
 .header_desktop {
@@ -286,6 +296,7 @@
   border-radius: 35px;
   transition: background-color 0.3s ease-in-out;
   margin-right: 20px;
+  cursor: pointer;
   background-color: #ccc;
 }
 .header_desktop .toggle-switch_light .slider {
@@ -311,6 +322,7 @@
   border-radius: 35px;
   transition: background-color 0.3s ease-in-out;
   margin-right: 20px;
+  cursor: pointer;
   background-color: rgb(117, 117, 117);
 }
 .header_desktop .toggle-switch_dark .slider {
