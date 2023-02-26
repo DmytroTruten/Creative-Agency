@@ -5,7 +5,7 @@ import Button from "../button/Button";
 import ToggleSwitch from "../toggle-switch/ToggleSwitch";
 import React, { Fragment, useState, useEffect } from "react";
 
-function Header() {
+function Header(props) {
   const [screen, setScreenState] = useState("");
   const [sidenavVisible, setSidenavState] = useState(false);
 
@@ -49,7 +49,7 @@ function Header() {
             <span></span>
           </div>
           <div className={`header__sidenav${sidenavVisible ? "_opened" : ""}`}>
-            <ToggleSwitch />
+            <ToggleSwitch onThemeChange={props.onThemeChange} />
             <Navigation
               for="sidenav-mobile"
               screen={screen}
