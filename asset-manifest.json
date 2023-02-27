@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/Creative-Agency/static/css/main.d88261ff.css",
+    "main.js": "/Creative-Agency/static/js/main.005e26be.js",
+    "static/media/main-image.svg": "/Creative-Agency/static/media/main-image.fccc4b402ebab99bd736756aa5126248.svg",
+    "static/media/about-image.svg": "/Creative-Agency/static/media/about-image.e3ab48adabf929ed7eda1b3a655bde93.svg",
+    "static/media/main-review.svg": "/Creative-Agency/static/media/main-review.e2ee2e993d39002874fb0c566a4e50ac.svg",
+    "static/media/get-started-image1.svg": "/Creative-Agency/static/media/get-started-image1.a60f391942628e1461a3de1038442505.svg",
+    "static/media/get-started-image2.svg": "/Creative-Agency/static/media/get-started-image2.1cfd122eedd95fca38062e21a8dad7ac.svg",
+    "static/media/design-byte.svg": "/Creative-Agency/static/media/design-byte.b8c380d5318d635629f370f047a83205.svg",
+    "static/media/design-furniture.svg": "/Creative-Agency/static/media/design-furniture.6589646adbb427a70204ab30eb46bbca.svg",
+    "static/media/cloud.svg": "/Creative-Agency/static/media/cloud.697e0e39109720793c50e39fe1a77f9e.svg",
+    "static/media/angel-rose.svg": "/Creative-Agency/static/media/angel-rose.082ff706a94937c4ca96dcac41a61ecd.svg",
+    "static/media/main-rate.svg": "/Creative-Agency/static/media/main-rate.8471c8ac5519832e4c58e7037663cb96.svg",
+    "static/media/search-engine.svg": "/Creative-Agency/static/media/search-engine.7b3b5c06ee6f4c7f6e12f8387e23f88d.svg",
+    "static/media/logoMobile.svg": "/Creative-Agency/static/media/logoMobile.ef518020d2fda624e5970b9fceede762.svg",
+    "static/media/instagram.svg": "/Creative-Agency/static/media/instagram.7500b38eb183f30659e5ddc380f9049d.svg",
+    "static/media/linkedin.svg": "/Creative-Agency/static/media/linkedin.fd93da06a71e01e05b4b7875c0e8c693.svg",
+    "static/media/twitter.svg": "/Creative-Agency/static/media/twitter.0c4f62d6049d27d9d6dacc9c9f4aef61.svg",
+    "static/media/design.svg": "/Creative-Agency/static/media/design.b7d3eca489f45e8c2ce5000e6665699c.svg",
+    "static/media/facebook.svg": "/Creative-Agency/static/media/facebook.f225822125ca6c7e9ae7e692603d8905.svg",
+    "index.html": "/Creative-Agency/index.html",
+    "static/media/gmail.svg": "/Creative-Agency/static/media/gmail.85198c1e3cba1c3806ea93992ea0389b.svg",
+    "static/media/monitor.svg": "/Creative-Agency/static/media/monitor.4f3c5f80e6976cb8d532cbdfd5c4043c.svg",
+    "static/media/ads.svg": "/Creative-Agency/static/media/ads.676af76dd1a063118f5fa3b09e6922c7.svg",
+    "static/media/play-circle.svg": "/Creative-Agency/static/media/play-circle.6d6c2b0b45c9a417e78937b2d1332533.svg",
+    "static/media/arrow-right.svg": "/Creative-Agency/static/media/arrow-right.6fef15557bd0a0ecd865bd38b17d2ffe.svg",
+    "static/media/ellipse.svg": "/Creative-Agency/static/media/ellipse.d19528cac939b5f86b134641d03e26f2.svg",
+    "main.d88261ff.css.map": "/Creative-Agency/static/css/main.d88261ff.css.map",
+    "main.005e26be.js.map": "/Creative-Agency/static/js/main.005e26be.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d88261ff.css",
+    "static/js/main.005e26be.js"
+  ]
+}
