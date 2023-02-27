@@ -4,10 +4,13 @@ function ToggleSwitch(props) {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
+    window.onload = () => {
+      localStorage.setItem("theme", theme);
+    };
     const savedTheme = localStorage.getItem("theme");
     if (theme !== savedTheme) {
       setTheme(savedTheme);
-      props.onThemeChange(savedTheme)
+      props.onThemeChange(savedTheme);
     }
   }, []);
 
