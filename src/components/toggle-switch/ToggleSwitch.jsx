@@ -4,25 +4,27 @@ function ToggleSwitch(props) {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
+    let savedThemeForResize = localStorage.getItem("theme");
     window.onload = () => {
-      localStorage.setItem("theme", theme);
+      let savedThemeOnLoad = localStorage.getItem("theme");
+      if (savedThemeOnLoad === null) {
+        localStorage.setItem("theme", theme);
+        savedThemeOnLoad = "light";
+      }
     };
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === null) {
-      setTheme(theme);
-      props.onThemeChange(theme);
-    } 
-    if (savedTheme !== theme) {
-      setTheme(savedTheme);
-      props.onThemeChange(savedTheme);
+    if (savedThemeForResize !== null) {
+      setTheme(savedThemeForResize);
+      props.onThemeChange(savedThemeForResize);
     }
   }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    props.onThemeChange(newTheme);
     localStorage.setItem("theme", newTheme);
+    const savedTheme = localStorage.getItem("theme");
+    setTheme(savedTheme);
+    props.onThemeChange(savedTheme);
+    console.log(localStorage);
   };
 
   return (
