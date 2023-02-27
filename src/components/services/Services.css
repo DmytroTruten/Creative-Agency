@@ -56,9 +56,14 @@
   max-width: -moz-min-content;
   max-width: min-content;
   margin-top: 35px;
+  position: relative;
 }
 .services_mobile .services__grid .services-card__content .services-card__content-img {
   margin: 0px 0px 27px;
+}
+.services_mobile .services__grid .services-card__content .services-card__monitor-img {
+  position: absolute;
+  top: 30px;
 }
 .services_mobile .services__grid .services-card__content .services-card__content-text {
   font-size: 16px;
@@ -136,9 +141,14 @@
   max-width: -moz-min-content;
   max-width: min-content;
   margin-top: 35px;
+  position: relative;
 }
 .services_desktop .services__grid .services-card__content .services-card__content-img {
   margin: 0px 0px 27px;
+}
+.services_desktop .services__grid .services-card__content .services-card__monitor-img {
+  position: absolute;
+  top: 30px;
 }
 .services_desktop .services__grid .services-card__content .services-card__content-text {
   font-size: 24px;

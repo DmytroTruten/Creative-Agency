@@ -1,7 +1,8 @@
 import "./Services.css";
-import socialMedia from "../../images/services/social-media.svg";
 import searchEngine from "../../images/services/search-engine.svg";
 import design from "../../images/services/design.svg";
+import monitor from "../../images/services/monitor.svg";
+import ellipse from "../../images/services/ellipse.svg";
 import ads from "../../images/services/ads.svg";
 import arrowRight from "../../images/services/arrow-right.svg";
 import React, { useState, useEffect } from "react";
@@ -61,10 +62,11 @@ function Service(props) {
       {props.card === "media" && (
         <div className="services-card__content">
           <img
-            className="services-card__content-img"
-            src={socialMedia}
+            className="services-card__content-img social-media-ellipse"
+            src={ellipse}
             alt=""
           />
+          <img className="services-card__monitor-img" src={monitor} alt="" />
           <p className="services-card__content-text">Social Media Management</p>
         </div>
       )}

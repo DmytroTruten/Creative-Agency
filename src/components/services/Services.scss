@@ -44,9 +44,15 @@
       @include flexbox(column);
       max-width: min-content;
       margin-top: 35px;
+      position: relative;
 
       .services-card__content-img {
         margin: 0px 0px 27px;
+      }
+
+      .services-card__monitor-img {
+        position: absolute;
+        top: 30px;
       }
 
       .services-card__content-text {
@@ -116,9 +122,15 @@
       @include flexbox(column);
       max-width: min-content;
       margin-top: 35px;
+      position: relative;
 
       .services-card__content-img {
         margin: 0px 0px 27px;
+      }
+
+      .services-card__monitor-img {
+        position: absolute;
+        top: 30px;
       }
 
       .services-card__content-text {
@@ -133,25 +145,25 @@
   .services_desktop {
     @include flexbox(column);
     padding: 100px 100px 0px;
-  
+
     .services__text-container {
       width: 100%;
     }
-  
+
     .services__read-more-container {
       @include flexbox(row);
       justify-content: flex-start;
       margin: 10px 0px 0px;
-  
+
       .services__read-more {
         font-weight: 700;
       }
-  
+
       .services__arrow-right {
         margin-left: 10px;
       }
     }
-  
+
     .services__grid {
       display: grid;
       grid-template: 1fr 1fr / 1fr 1fr;
@@ -159,20 +171,20 @@
       justify-items: center;
       width: 100%;
       margin-top: 30px;
-  
+
       .services-grid__services-card {
         @include service-card;
       }
-  
+
       .services-card__content {
         @include flexbox(column);
         max-width: min-content;
         margin-top: 35px;
-  
+
         .services-card__content-img {
           margin: 0px 0px 27px;
         }
-  
+
         .services-card__content-text {
           font-size: 16px;
           font-weight: 700;
