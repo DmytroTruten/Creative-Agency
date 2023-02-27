@@ -8,7 +8,11 @@ function ToggleSwitch(props) {
       localStorage.setItem("theme", theme);
     };
     const savedTheme = localStorage.getItem("theme");
-    if (theme !== savedTheme) {
+    if (savedTheme === null) {
+      setTheme(theme);
+      props.onThemeChange(theme);
+    } 
+    if (savedTheme !== theme) {
       setTheme(savedTheme);
       props.onThemeChange(savedTheme);
     }
