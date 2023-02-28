@@ -69,6 +69,7 @@
 
   .sidenav__backpanel {
     @include sidenav__backpanel;
+    display: none;
     background-color: transparent;
   }
   .sidenav__backpanel_opened {

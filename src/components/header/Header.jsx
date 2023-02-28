@@ -3,11 +3,12 @@ import logo from "../../logoMobile.svg";
 import Navigation from "../navigation/Navigation";
 import Button from "../button/Button";
 import ToggleSwitch from "../toggle-switch/ToggleSwitch";
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState, useEffect, useRef } from "react";
 
 function Header(props) {
   const [screen, setScreenState] = useState("");
   const [sidenavVisible, setSidenavState] = useState(false);
+  const backpanel = useRef(null);
 
   useEffect(() => {
     handleHeaderState();
@@ -16,7 +17,7 @@ function Header(props) {
     return () => {
       window.removeEventListener("resize", handleHeaderState);
     };
-  }, []);
+  }, [sidenavVisible]);
 
   const handleHeaderState = () => {
     if (window.innerWidth <= 768) {
@@ -26,21 +27,16 @@ function Header(props) {
     }
   };
 
-  const toggleHamburgerMenu = () => {
-    setSidenavState(!sidenavVisible);
-    if (sidenavVisible) {
-      setTimeout(() => {
-        document.querySelector(".sidenav__backpanel").style.display = "none";
-        document.querySelector(".sidenav__backpanel").style.animation =
-          "backpanel-hide .5s ease-in-out";
-      }, 490);
+  const toggleSidenav = () => {
+    setSidenavState((prevState) => !prevState);
+
+    if (!sidenavVisible) {
+      backpanel.current.style.display = "block";
+      backpanel.current.style.animation = "backpanel-reveal .5s ease-in-out";
     } else {
       setTimeout(() => {
-        document.querySelector(".sidenav__backpanel_opened").style.display =
-          "block";
-        document.querySelector(".sidenav__backpanel_opened").style.animation =
-          "backpanel-reveal .5s ease-in-out";
-      });
+        backpanel.current.style.display = "none";
+      }, 490);
     }
   };
 
@@ -56,7 +52,7 @@ function Header(props) {
       {screen === "mobile" && (
         <Fragment>
           <div
-            onClick={toggleHamburgerMenu}
+            onClick={toggleSidenav}
             className={`header__hamburger-menu${
               sidenavVisible ? " active" : ""
             }`}
@@ -70,14 +66,13 @@ function Header(props) {
             <Navigation
               for="sidenav-mobile"
               screen={screen}
-              toggleSidenav={() => {
-                setSidenavState(!sidenavVisible);
-              }}
+              toggleSidenav={toggleSidenav}
             />
             <Button className="header__contact-button" text="Contact Us" />
           </div>
           <div
             className={`sidenav__backpanel${sidenavVisible ? "_opened" : ""}`}
+            ref={backpanel}
           ></div>
         </Fragment>
       )}
