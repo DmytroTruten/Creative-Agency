@@ -138,3 +138,23 @@
     padding: 40px 100px 0px !important;
   }
 }
+
+@keyframes backpanel-reveal {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes backpanel-hide {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

@@ -166,6 +166,9 @@
   height: 100%;
   width: 100%;
   transition: 0.5s ease-in-out;
+  display: none;
+  -webkit-animation: backpanel-hide 0.5s ease-in-out forwards;
+          animation: backpanel-hide 0.5s ease-in-out forwards;
   background-color: transparent;
 }
 .header_mobile .sidenav__backpanel_opened {
@@ -175,6 +178,9 @@
   height: 100%;
   width: 100%;
   transition: 0.5s ease-in-out;
+  display: block;
+  -webkit-animation: backpanel-reveal 0.5s ease-in-out;
+          animation: backpanel-reveal 0.5s ease-in-out;
   background-color: rgba(0, 0, 0, 0.4);
 }
 .header_mobile .toggle-switch_light {
@@ -352,5 +358,37 @@
 @media (min-width: 992px) {
   .header_desktop {
     padding: 40px 100px 0px !important;
+  }
+}
+@-webkit-keyframes backpanel-reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes backpanel-reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes backpanel-hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes backpanel-hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }/*# sourceMappingURL=Header.css.map */

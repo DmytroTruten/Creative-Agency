@@ -24,7 +24,6 @@ function ToggleSwitch(props) {
     const savedTheme = localStorage.getItem("theme");
     setTheme(savedTheme);
     props.onThemeChange(savedTheme);
-    console.log(localStorage);
   };
 
   return (

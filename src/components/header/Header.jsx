@@ -26,6 +26,24 @@ function Header(props) {
     }
   };
 
+  const toggleHamburgerMenu = () => {
+    setSidenavState(!sidenavVisible);
+    if (sidenavVisible) {
+      setTimeout(() => {
+        document.querySelector(".sidenav__backpanel").style.display = "none";
+        document.querySelector(".sidenav__backpanel").style.animation =
+          "backpanel-hide .5s ease-in-out";
+      }, 490);
+    } else {
+      setTimeout(() => {
+        document.querySelector(".sidenav__backpanel_opened").style.display =
+          "block";
+        document.querySelector(".sidenav__backpanel_opened").style.animation =
+          "backpanel-reveal .5s ease-in-out";
+      });
+    }
+  };
+
   return (
     <header className={`header_${screen}`}>
       <div className="header__logo-container">
@@ -38,9 +56,7 @@ function Header(props) {
       {screen === "mobile" && (
         <Fragment>
           <div
-            onClick={() => {
-              setSidenavState(!sidenavVisible);
-            }}
+            onClick={toggleHamburgerMenu}
             className={`header__hamburger-menu${
               sidenavVisible ? " active" : ""
             }`}
