@@ -1,11 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Quicksand:wght@300;400;500;600;700&display=swap");
-@import "./helpers/_variables.scss";
-
-:root {
-  --main-black: #1d1d1d;
-  --main-gray: #464646;
-  --main-blue: #377dff;
-}
 
 * {
   box-sizing: border-box;
@@ -19,12 +12,13 @@ h4 {
 }
 
 h1 {
-  color: var(--main-black);
+  color: #1d1d1d;
   font-weight: 800;
   text-align: center;
 }
 
 h2 {
+  color: #1d1d1d;
   font-family: "Nunito";
   font-weight: 700;
   text-align: center;
@@ -35,19 +29,18 @@ h2 {
 h4 {
   font-size: 14px;
   font-weight: 600;
-  color: var(--main-blue);
+  color: #377dff;
   text-align: center;
 }
 
 p {
-  color: var(--main-gray);
+  color: #464646;
   font-weight: 400;
   line-height: 24px;
   font-family: "Quicksand";
   text-align: center;
   margin: 0;
 }
-
 
 html,
 body {
@@ -78,5 +71,5 @@ body {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: var(--main-blue);
+  background-color: #377dff;
 }
