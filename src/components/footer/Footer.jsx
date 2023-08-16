@@ -79,7 +79,7 @@ function Footer() {
         </div>
         <span className="footer__splitting-line"></span>
         <p className="footer__license">
-          Copyright @ 2023 Agency Creative. All Right Reserved
+          Copyright @ {new Date().getFullYear()} Creative Agency. All Right Reserved
         </p>
       </div>
     </footer>
