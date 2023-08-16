@@ -1,5 +1,5 @@
 import "./Footer.css";
-import logo from "../../logoMobile.svg";
+import logo from "/logoMobile.svg";
 import facebookIcon from "../../images/footer/facebook.svg";
 import instagramIcon from "../../images/footer/instagram.svg";
 import linkedinIcon from "../../images/footer/linkedin.svg";

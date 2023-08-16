@@ -1,5 +1,5 @@
 import "./Header.css";
-import logo from "../../logoMobile.svg";
+import logo from "/logoMobile.svg";
 import Navigation from "../navigation/Navigation";
 import Button from "../button/Button";
 import ToggleSwitch from "../toggle-switch/ToggleSwitch";
