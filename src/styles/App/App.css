@@ -1,0 +1,74 @@
+.light,
+.dark,
+.header_mobile,
+.ellipse-grid__ellipse_blue,
+.about__play-circle,
+.services__arrow-right,
+.social-media-ellipse,
+.services-card__monitor-img,
+body,
+p,
+h1,
+h2,
+h4,
+span,
+button {
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.dark body {
+  background-color: #0d0d0d;
+}
+.dark .ellipse-grid__ellipse_blue {
+  background-color: #e2e2e2 !important;
+}
+.dark h1,
+.dark h2,
+.dark h4,
+.dark p,
+.dark span {
+  color: #e2e2e2 !important;
+}
+.dark .header_mobile {
+  background-color: #0d0d0d;
+  border-bottom: 1px solid #818181;
+}
+.dark .header_mobile .header__hamburger-menu span {
+  background-color: #e2e2e2;
+}
+.dark .main__start-project-button,
+.dark .about__button,
+.dark .get-started__button {
+  background-color: #e2e2e2 !important;
+  color: #0d0d0d !important;
+}
+.dark .header__contact-button,
+.dark .about__play-button,
+.dark .portfolio__button {
+  border: 1px solid #e2e2e2 !important;
+  color: #e2e2e2 !important;
+}
+.dark .testimonial__carousel {
+  background-color: transparent !important;
+  z-index: 5;
+}
+.dark .testimonial__carousel .card {
+  background-color: #0b0f15 !important;
+}
+.dark .testimonial__carousel .card .card-name {
+  color: #e2e2e2;
+}
+.dark .testimonial__carousel .card .card-position {
+  color: rgba(226, 226, 226, 0.5019607843);
+}
+.dark .about__play-circle,
+.dark .services__arrow-right,
+.dark .social-media-ellipse {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(4%) hue-rotate(219deg) contrast(77%);
+}
+.dark .services-card__monitor-img {
+  filter: brightness(0) saturate(100%);
+}
+.dark .footer__logo-text span {
+  color: #1d1d1d !important;
+}/*# sourceMappingURL=App.css.map */
