@@ -1,70 +1,53 @@
-# Creative Agency
+# Creative-Agency
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a sample website built using React and React-Bootstrap. It showcases various components and sections that you can use as a starting point for your own projects.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Components](#components)
+- [Theme Customization](#theme-customization)
+- [Contributing](#contributing)
 
-### `npm start`
+## Introduction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project is a demonstration of a responsive website developed with React and enhanced with React-Bootstrap components. It features a header, main content section, about section, services section, portfolio showcase, testimonial section, and a "get started" call-to-action.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+To set up this project locally, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository: `git clone https://github.com/DmytroTruten/Creative-Agency.git`
+2. Navigate to the project directory: `cd <project_directory>`
+3. Install dependencies: `npm install`
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+After installing the required dependencies, you can start the development server using the following command:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`npm run dev`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This will launch the development server, and you can access the website in your web browser by visiting `http://localhost:5173`.
 
-### `npm run eject`
+## Components
+The website is structured into several components, each serving a specific purpose:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Header: Displays the navigation header.
+Main: The main content section of the website.
+About: Information about the website or company.
+Services: Services offered by the company.
+Portfolio: Showcase of previous work or projects.
+Testimonial: Customer testimonials or reviews.
+GetStarted: A call-to-action section to encourage user engagement.
+Footer: The footer section containing additional information.
+Feel free to customize and extend these components to match your project's requirements.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Theme Customization
+The project includes a ThemeContext that can be used to manage the website's theme. The theme is managed using React context to provide a consistent style throughout the site.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contributing
+Contributions are welcome! If you find any issues or want to enhance the project, feel free to open pull requests or issues in the repository.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+When contributing, please adhere to the existing code style and guidelines. Ensure that your code is well-documented and thoroughly tested.
