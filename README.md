@@ -34,18 +34,18 @@ This will launch the development server, and you can access the website in your 
 ## Components
 The website is structured into several components, each serving a specific purpose:
 
-Header: Displays the navigation header.
-Main: The main content section of the website.
-About: Information about the website or company.
-Services: Services offered by the company.
-Portfolio: Showcase of previous work or projects.
-Testimonial: Customer testimonials or reviews.
-GetStarted: A call-to-action section to encourage user engagement.
-Footer: The footer section containing additional information.
+- Header: Displays the navigation header.
+- Main: The main content section of the website.
+- About: Information about the website or company.
+- Services: Services offered by the company.
+- ortfolio: Showcase of previous work or projects.
+- Testimonial: Customer testimonials or reviews.
+- GetStarted: A call-to-action section to encourage user engagement.
+- Footer: The footer section containing additional information.
 Feel free to customize and extend these components to match your project's requirements.
 
 ## Theme Customization
-The project includes a ThemeContext that can be used to manage the website's theme. The theme is managed using React context to provide a consistent style throughout the site.
+The project includes a `ThemeContext` that can be used to manage the website's theme. The theme is managed using React context to provide a consistent style throughout the site.
 
 ## Contributing
 Contributions are welcome! If you find any issues or want to enhance the project, feel free to open pull requests or issues in the repository.
