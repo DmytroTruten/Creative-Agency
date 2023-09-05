@@ -38,7 +38,7 @@ The website is structured into several components, each serving a specific purpo
 - Main: The main content section of the website.
 - About: Information about the website or company.
 - Services: Services offered by the company.
-- ortfolio: Showcase of previous work or projects.
+- Portfolio: Showcase of previous work or projects.
 - Testimonial: Customer testimonials or reviews.
 - GetStarted: A call-to-action section to encourage user engagement.
 - Footer: The footer section containing additional information.
